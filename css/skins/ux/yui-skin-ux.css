@@ -1,0 +1,1688 @@
+/*
+	THIS IS FOR DASHBOARD.HTML
+
+	If you add/change styles that provide page structure, consider updating styles.html.
+*/
+
+html {
+	/*
+		Prevents page "jiggle" by forcing vertical scroll bar to always display.
+	*/
+    overflow-y: scroll;
+    overflow-x: auto;
+
+    background-color: #F2F2F2 !important;
+}
+
+body, p, div, table, tr, th, td {
+    font-size: 12px;
+    color: #333;
+}
+
+.ux-rightnav-belowtabs {
+   position:absolute;
+   top: 15em;
+   right: 2em;
+   width: 12em;
+   z-index: 15;
+}
+
+.ux-rightnav-abovetabs {
+   position:absolute;
+   top: 0em;
+   right: 2em;
+   width: 12em;
+}
+
+.ux-background {
+   display: block;
+   position: absolute;
+   width: 13em;
+   height: 8em;
+   top: 5em;
+   right: 1em;
+   background: #e0e0e0;
+}
+
+.ux-header {
+   border: 1px solid black;
+   padding: 20px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+#hd-branding {
+	text-align: center;
+}
+
+.ux-block {
+   margin-bottom: 1em;
+   padding: 1em;
+}
+
+.ux-block2 {
+   padding: 0 1.3em;
+   clear: both;
+}
+
+.yui-skin-ux a,
+.yui-skin-ux a:link {
+    font-size: 12px;
+    color: #1441B3;
+    text-decoration: none;
+}
+
+.yui-skin-ux a:hover {
+    text-decoration: underline;
+}
+
+.yui-skin-ux #hd {
+	margin: 0 0 0 -3px;
+}
+
+.yui-skin-ux #content.yui-b {
+    padding: 30px 20px;
+    background: #fff;
+    border-right: 1px solid #D4D4D4;
+}
+
+.yui-skin-ux #content.yui-b h1 {
+    margin: 30px 0 20px;
+}
+
+.yui-skin-ux #content.yui-b h2  {
+    margin: 25px 0 10px;
+}
+
+div.ux-main div.dashboard-bd {
+    background: #fff;
+    width: 100%;
+}
+
+div.ux-main div.dashboard-bd div#yui-main {
+	margin-right: 0px;
+	background: #ffffff;
+	border: 0px;
+}
+
+#yui-main-table td {
+    vertical-align: top;
+}
+
+div.ux-main table#yui-main-table{
+    border: 1px solid #D4D4D4;
+ }
+
+#yui-main-td {
+    width: 100%
+}
+
+#yui-sidebar-td {
+	border-top: 0px;
+    background-color: #EDF0F3;
+    border-left: 1px solid #D4D4D4;
+    padding-top: 20px;
+}
+
+div.dashboard-bd div#sidebar ul.subnav li {
+	border-right: 1px solid #D4D4D4;
+}
+
+.yui-skin-ux #sidebar .sidebar-form .label-field-wrap {
+	margin-bottom: 20px;
+}
+
+.yui-skin-ux #sidebar .sidebar-form .label-field-wrap input {
+    width: 97%;
+	height: 25px;
+}
+
+div.ux-main div#yui-main div#content {
+	margin-right: 0px;
+	border-right: 0px;
+}
+
+.yui-skin-ux em {
+    font-style: italic;
+}
+
+.yui-skin-ux .yuimenuitemlabel {
+    padding: 2px;
+}
+
+.yui-skin-ux .yuimenu {
+    border: 1px solid #393e44;
+    background: #fff;
+    padding: 0 .5em 0 .5em;
+}
+
+.yui-skin-ux #doc2 {
+	width: 1000px;
+	border-width: 0 0 3px 3px;
+}
+
+.yui-skin-ux .ux-main {
+	margin-bottom: 30px;
+}
+
+.yui-skin-ux div .left-split {
+	float: left;
+	position: relative;
+}
+.yui-skin-ux div .right-split {
+	float: right;
+	position: relative;
+}
+.yui-skin-ux div .clear-split {
+	clear: both;
+}
+
+/* MAIN CONTENT HEADER */
+
+.yui-skin-ux .content-header {
+    padding-top: 0.7em;
+    color: #333;
+}
+
+.yui-skin-ux .content-header h1 {
+	padding: 0;
+}
+
+.yui-skin-ux .content-header .search {
+	margin-bottom: 0.75em;
+	padding: 0 1em;
+}
+
+.yui-skin-ux .content-header div .left-split {
+	float: left;
+	position: relative;
+}
+
+.yui-skin-ux .content-header div .right-split {
+	float: right;
+	position: relative;
+}
+
+.yui-skin-ux .content-header .search label {
+	display: block;
+}
+
+.yui-skin-ux .content-header .search label strong {
+	font-weight: bold;
+}
+
+.yui-skin-ux .content-header .search input {
+	margin-right: 0.5em;
+}
+
+.yui-skin-ux h1,
+.yui-skin-ux div.h1-imposter {
+    font-size: 21px;
+    color: #333;
+}
+
+.yui-skin-ux h2 {
+    font-size: 16px;
+    color: #333;
+}
+
+.yui-skin-ux div.h1-imposter a {
+	font-size: .7em;
+	margin: 0em 1.5em;
+}
+
+.yui-skin-ux .ux-hd-row {
+    margin-top: 20px;
+	clear: both;
+}
+
+.yui-skin-ux .ux-hd-small {
+	padding: 0.2em 2em;
+    font-size: 11px;
+}
+
+.yui-skin-ux .ux-hd-small div#hd-small-left {
+	float: left;
+}
+
+.yui-skin-ux .ux-hd-small div#hd-small-right {
+	float: right;
+}
+
+.yui-skin-ux .ux-pipe-divider {
+    font-size: 1em;
+}
+
+.yui-skin-ux #hd-nav {
+	float: left;
+	margin: 20px 0 -2px 2.5em;
+    position: relative;
+}
+
+.yui-skin-ux #hd-nav li {
+    float: left;
+    background-color: #333;
+    font-size: 14px;
+    color: #fff;
+    margin: 0 2.5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.yui-skin-ux #hd-nav a,
+.yui-skin-ux #hd-nav a:link,
+.yui-skin-ux #hd-nav a:visited {
+	display: block;
+    text-decoration: none;
+	outline: none;
+    padding: 0.5em 1em .25em;
+    font-size: 14px;
+    color: #fff;
+}
+
+.yui-skin-ux #hd-nav .selected {
+    background-color: #fff;
+    margin: 0 2.5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    border-color: #D4D4D4
+
+}
+
+.yui-skin-ux #hd-nav .selected a {
+    color: #444;
+}
+
+.yui-skin-ux #hd-nav .selected a:hover,
+.yui-skin-ux #hd-nav .selected a:active {
+    cursor: pointer;
+}
+
+.yui-skin-ux #hd-etc {
+	float: right;
+	padding: 0.75em 2em 0em 0em;
+}
+
+.yui-skin-ux #hd-nav-base {
+    background-color: #000000;
+    height: .4em;
+    /*
+    	hide overflow to convince IE 6 to honor the div's height
+    */
+    overflow: hidden;
+}
+
+.yui-skin-ux #content-actions {
+    padding: 1em 1.4em 0.7em;
+    /*background: #d7fcfd;*/
+}
+
+.yui-skin-ux #content-actions button,
+.yui-skin-ux #content-actions a {
+    margin-right: 0.5em;
+}
+
+.yui-skin-ux #content-actions .primary {
+	font-weight: bold;
+}
+
+.yui-skin-ux .ux-logo {
+    float: right;
+}
+/*
+.yui-skin-ux h1 {
+    font-size: 3em;
+    display: inline;
+}
+*/
+
+.yui-skin-ux h3 {
+    font-size: 14px;
+    display: block;
+}
+
+.yui-skin-ux h3.ui-accordion-header {
+	padding: 0;
+}
+
+.yui-skin-ux #hd-labels h2 {
+    /*vertical-align: bottom; */
+    color: #d0d0d0;
+}
+
+.yui-skin-ux h5 {
+    margin-bottom: 0.1em;
+    font-size: 1em;
+}
+
+.yui-skin-ux .mask {
+    background-color: #000;
+    opacity: .5;
+    filter: alpha(opacity=50);  /* Set opacity in IE */
+}
+
+.yui-skin-ux .yui-panel-container {
+    padding:0 1px;
+}
+
+/*
+.yui-skin-ux .yui-panel .hd {
+     background-color: #d8fbfd;
+     text-align: left;
+     padding: .5em;
+}
+
+.yui-skin-ux .yui-panel .bd {
+    background-color: #d8fbfd;
+    text-align: left;
+    padding: .5em;
+}
+.yui-skin-ux .yui-panel .ft {
+    background-color: #d8fbfd;
+    text-align: left;
+    padding: .5em;
+}
+*/
+
+
+.yui-skin-ux .bd-progress h3 {
+	padding: 0;
+	font-size: 1.1em;
+}
+
+.yui-skin-ux .fundraising-progress .section {
+    display: inline-block;
+    margin: 0 10px 20px;
+    padding: 20px;
+    border: 1px solid #D7D7D7;
+
+    background: #fcfcfc; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fcfcfc 0%, #f7f7f7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#f7f7f7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fcfcfc 0%,#f7f7f7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fcfcfc 0%,#f7f7f7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fcfcfc 0%,#f7f7f7 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fcfcfc 0%,#f7f7f7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#f7f7f7',GradientType=0 ); /* IE6-9 */
+
+}
+
+.yui-skin-ux .fundraising-progress #msg_cat_progress_team_progress,
+.yui-skin-ux .fundraising-progress .progress-team-progress-value,
+.yui-skin-ux .fundraising-progress #msg_cat_progress_team_goal,
+.yui-skin-ux .fundraising-progress .progress-team-goal-value
+{
+    display: none;
+}
+.yui-skin-ux .fundraising-progress .progress-goal-team {
+    float: left;
+    width: 15em;
+}
+
+.yui-skin-ux .fundraising-progress .progress-goal-team dt {
+    float: left;
+    width: 60%;
+    color: #aaa;
+    text-transform: uppercase;
+}
+
+.yui-skin-ux .fundraising-progress #progress-line-heightgoal-team dt a {
+    text-transform: none;
+}
+
+.yui-skin-ux .fundraising-progress .progress-goal-team dd {
+    float: right;
+    width: 40%;
+    text-align: right;
+}
+
+.yui-skin-ux .fundraising-progress .progress-goal-team a {
+	color: #666;
+	text-transform: none;
+}
+
+.yui-skin-ux .tiny-block {
+    font-size: 12px;
+    color: #333;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.yui-skin-ux .big-block {
+    margin-bottom: 0.5em;
+    font-size: 36px;
+    color: #666;
+    line-height: 0.8em;
+    text-align: center;
+}
+
+/* MISC */
+.yui-skin-ux .big-button {
+    padding: .5em 1em;
+    margin: 1em 2em;
+    border: 2px solid;
+    -moz-border-radius: 1em;
+	border-radius: 	1em;
+    width: 60%;
+}
+
+.yui-skin-ux .big-button-on {
+    background: #FFFFCD;
+    border-color: #FBDFA5;
+}
+
+.yui-skin-ux .big-button-off {
+    background: #FFFFFF;
+    border-color: #DDDDDD;
+}
+
+.yui-skin-ux .big-button img,
+.yui-skin-ux .big-button label,
+.yui-skin-ux .big-button p,
+.yui-skin-ux .big-button span,
+.yui-skin-ux .big-button input {
+    vertical-align:middle;
+    margin-right: 0.75em;
+}
+
+.yui-skin-ux .indented {
+    margin-left: 3em;
+}
+
+.yui-skin-ux .dataTableActionButtonContainer {
+    margin: 0.25em;
+}
+
+.yui-skin-ux .breakWord {
+    word-wrap: break-word;
+}
+
+.yui-skin-ux .smaller {
+    font-size: 0.8em;
+}
+
+
+/* SIDEBAR */
+
+.yui-skin-ux #sidebar h3 {
+    padding: 0 0 20px;
+}
+
+.yui-skin-ux #sidebar a {
+	color: 0090FF;
+}
+
+.yui-skin-ux #sidebar .noun {
+	/* place holder ... no styles currently applied to sidebar noun phrases */
+}
+
+.yui-skin-ux .side-links,
+.yui-skin-ux .side-content,
+.yui-skin-ux .subnav {;
+	clear: both;
+}
+
+.yui-skin-ux #sidebar.yui-b .side-block {
+    background: #fff;
+    padding: 15px 10px;
+    border: 1px solid #D7D7D7;
+}
+
+/* SIDEBAR MODULE */
+
+.yui-skin-ux #sidebar .module {
+    margin: 0 1.5em 1.5em;
+	padding: 10px;
+    background: #fff;
+    border: 1px solid #D7D7D7;
+    font-size: 14px;
+}
+
+.yui-skin-ux #sidebar .module li {
+	margin-bottom: 0.4em;
+}
+
+.yui-skin-ux #sidebar .module a {
+	font-size: 0.95em;
+}
+
+
+/* SUBNAV (i.e. contextual navigation links) */
+.yui-skin-ux ul.subnav {
+	padding: 0.5em 0em 0.5em 0em;
+}
+
+.yui-skin-ux ul.subnav li {
+    font-size: 16px;
+
+	margin: 2.5px -1px;
+    padding: 15px;
+
+    background-color: #E0E5E9;
+    border: 1px solid #D4D4D4;
+    border-right: 0;
+}
+
+.yui-skin-ux ul.subnav li.selected,
+.yui-skin-ux ul.subnav li.selected a {
+    color: #666;
+    background-color: #fff;
+    border-left: 0;
+}
+
+.yui-skin-ux ul.subnav li a {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* WIZARD (i.e. multi-step process) */
+.yui-skin-ux ol.subnav {
+	margin: 0em 1em 1.5em 1em;
+	padding: 0.5em 0em 0.5em 0em;
+	border: none;
+	background: #DDDDDD;
+}
+
+.yui-skin-ux ol.subnav li {
+	color: #0090FF;
+	margin: 0.3em 0.5em;
+    padding: 0.2em 1.3em;
+    font-size: 1.35em;
+    border: 2px solid;
+    border-color: #FFFFFF;
+    list-style-position:inside;
+    list-style-type: decimal;
+}
+
+.yui-skin-ux ol.subnav li.selected,
+.yui-skin-ux ol.subnav li.selected a,
+.yui-skin-ux ol.subnav li.selected span {
+    background: #FFFFCD;
+    border-color: #FBDFA5;
+}
+
+.yui-skin-ux ol.subnav li.wizard-next.selected {
+	opacity: 1;
+	filter:alpha(opacity=100);
+	color: #000000;
+}
+
+.yui-skin-ux ol.subnav li a {
+    color: #0090FF;
+    text-decoration: none;
+}
+
+.yui-skin-ux ol.subnav .wizard-next {
+	color: #000000;
+	opacity: .4;
+	filter:alpha(opacity=40);
+}
+
+.yui-skin-ux ol.subnav .wizard-next {
+	/*
+		IE6 and IE7 didn't corretly handle opacity for elements w/o explicit width & height
+		... simulate opacity by changing color
+	*/
+	*color: #8C8E84;
+}
+
+
+/* SIDEBAR FORM */
+
+.yui-skin-ux #sidebar .sidebar-form .label-field-wrap,
+.yui-skin-ux #sidebar .sidebar-form .radio-section,
+.yui-skin-ux #sidebar .sidebar-form .show-more {
+    margin-bottom: 0.5em;
+}
+
+.yui-skin-ux #sidebar .sidebar-form .label-field-wrap label {
+    display: block;
+}
+
+.yui-skin-ux #sidebar .sidebar-form .bd {
+	padding-bottom: 0.5em;
+	margin-bottom: 1em;
+}
+
+.yui-skin-ux #sidebar .sidebar-form .actions {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid #b4d3d4;
+    font-size: 1em;
+}
+
+
+/* SIDE LINKS (i.e. related action links) */
+
+.yui-skin-ux .side-links {
+    margin: 30px 0;
+}
+
+.yui-skin-ux .side-links li.right {
+	/* this style intentionally left empty ... see https://rally1.rallydev.com/slm/detail/ar/1863010722 */
+}
+
+.yui-skin-ux .side-links li.down {
+	background: url(../../../images/down_circle.gif) left center no-repeat;
+}
+
+.yui-skin-ux .side-links li.add {
+	/* this style intentionally left empty ... see https://rally1.rallydev.com/slm/detail/ar/1863010722 */
+}
+
+.yui-skin-ux .side-links li {
+    padding: 0.4em 0;
+}
+
+.yui-skin-ux .page-form .failure-message,
+.yui-skin-ux .page-form .success-message,
+.yui-skin-ux .success-message,
+.yui-skin-ux .failure-message {
+	margin-bottom: 0.75em;
+	padding: 0.3em 0.6em 0.3em 2.7em;
+    color: #356e4b;
+    font-size: 1em;
+    background: url(../../../images/check.gif) 0.7em center no-repeat #e7fff1;
+    border: 1px solid #6eb190;
+}
+
+.yui-skin-ux .page-form .failure-message,
+.yui-skin-ux .failure-message {
+    color: #c00;
+    background: url(../../../images/forbidden.gif) 0.7em center no-repeat #ffe7e7;
+    border: 1px solid #a82626;
+}
+
+/* Panel underlay styles */
+.yui-skin-ux .yui-panel-container .underlay {
+    right: -1px;
+    left: -1px;
+}
+
+.yui-skin-ux .yui-panel-container.matte {
+    padding: 9px 10px;
+    background-color: #fff;
+}
+
+.yui-skin-ux .yui-panel-container.shadow {
+    /* IE 7 Quirks Mode and IE 6 Standards Mode and Quirks mode */
+    _padding: 2px 4px 0 2px;
+}
+
+.yui-skin-ux .yui-panel-container.shadow .underlay {
+    position: absolute;
+    top: 2px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+
+    /* IE7 Strict (provides 3px shadow (when combined with 2px padding applied to container) */
+    *top: 4px;
+    *left: -1px;
+    *right: -1px;
+    *bottom: -1px;
+
+    /* IE 7 Quirks Mode and IE 6 Standards Mode and Quirks mode */
+    _top: 0;
+    _left: 0;
+    _right: 0;
+    _bottom: 0;
+    _margin-top: 3px;
+    _margin-left: -1px;
+
+    background-color: #000;
+    opacity: .12;
+    filter: alpha(opacity=12);  /* Set opacity in IE */
+}
+
+/* Not a strong selector */
+.yui-skin-ux .hidden-form {
+    display: none;
+}
+
+.yui-skin-ux optgroup {
+    font-size: 1.1em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.yui-skin-ux option {
+    font-size: .9em;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.yui-skin-ux .bold-item {
+    font-weight: bold;
+}
+
+/* fb popup dialog fix */
+.yui-skin-ux td.fb_pop_content h2 {
+	display:block;
+}
+
+
+/* MODAL DIALOG / LIGHTBOX */
+
+.yui-skin-ux .yui-panel {
+	background: #FFF;
+	text-align: left;
+}
+
+
+.yui-skin-ux .yui-panel .bd {
+	margin-bottom: 0.5em;
+}
+
+
+/* PAGINATION */
+.yui-skin-ux .pagination_block {
+	margin-bottom: 1em;
+	padding: 0.5em 0;
+	font-size: 0.9em;
+	text-align: right;
+}
+
+.yui-skin-ux .pagination_block .yui-pg-first,
+.yui-skin-ux .pagination_block .yui-pg-previous,
+.yui-skin-ux .pagination_block .yui-pg-next,
+.yui-skin-ux .pagination_block .yui-pg-last {
+	margin-right: 0.3em;
+	font-size: 1.4em
+}
+
+.yui-skin-ux .pagination_block .paginatorPageSize {
+	float: left;
+}
+
+.yui-skin-ux .pagination_block .paginatorPageNumber {
+	float: right;
+}
+
+.yui-skin-ux .yui-pg-current {
+	margin-right: 0.3em;
+}
+
+
+
+/* PRIMARY ACTION LINK */
+.yui-skin-ux div.primary-action {
+    background: #fafafa; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fafafa 0%, #eaeaea 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafafa), color-stop(100%,#eaeaea)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fafafa 0%,#eaeaea 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fafafa 0%,#eaeaea 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fafafa 0%,#eaeaea 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fafafa 0%,#eaeaea 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#eaeaea',GradientType=0 ); /* IE6-9 */
+
+    width: 98%;
+    margin-bottom: 10px;
+
+    border-radius: 4px;
+    border: 1px solid #D7D7D7;
+    box-shadow: 1px 1px 2px #AAA;
+
+    cursor: pointer;
+}
+
+.yui-skin-ux div.primary-action a {
+    display: block;
+    padding: 8px;
+    text-align: center;
+
+    font-size: 14px;
+    color: #666;
+}
+
+.yui-skin-ux div.primary-action a span {
+    padding-left: 30px;
+}
+
+.yui-skin-ux div.primary-action a.add span {
+    background-image: url(../../../images/add.gif);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.yui-skin-ux div.primary-action a.message span {
+	background-image: url(../../../images/message.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.yui-skin-ux div.primary-action a.money span {
+	background-image: url(../../../images/donation_icon.png);
+	background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.yui-skin-ux div.primary-action a:hover {
+    text-decoration: none;
+}
+
+/* FULL PAGE FORM */
+
+.yui-skin-ux .page-form {
+    padding-left: 1em;
+}
+
+.yui-skin-ux .page-form p {
+	padding: 0.35em;
+	clear: both;
+}
+
+.yui-skin-ux .page-form label {
+    float: left;
+    margin-right: 0.75em;
+    width: 7em;
+    text-align: right;
+    color: #666;
+}
+
+.yui-skin-ux .page-form label.error {
+	/* don't float form validation errors */
+    float: none;
+}
+
+.yui-skin-ux .page-form input {
+	color: #333;
+}
+
+
+/* SMALL TRASH LINK */
+.yui-skin-ux a.delete img {
+	opacity:0.75;
+	filter:alpha(opacity=75);
+}
+
+.yui-skin-ux a.delete img:hover {
+	opacity:1;
+	filter:alpha(opacity=100);
+	cursor: pointer;
+}
+
+.clear {
+	clear: both;
+}
+
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix {display:inline-block;}
+/* Hide from IE Mac \*/
+.clearfix {display:block;}
+/* End hide from IE Mac */
+
+/* SimpleDialog icon styles */
+.yui-skin-ux .yui-simple-dialog .bd .yui-icon {
+    background: url(../../../images/sprite.png) no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    float: left;
+}
+
+.yui-skin-ux .yui-simple-dialog .bd span.blckicon {
+    background-position: 0 -1100px;
+}
+
+.yui-skin-ux .yui-simple-dialog .bd span.alrticon {
+    background-position: 0 -1050px;
+}
+
+.yui-skin-ux .yui-simple-dialog .bd span.hlpicon {
+    background-position: 0 -1150px;
+}
+
+.yui-skin-ux .yui-simple-dialog .bd span.infoicon {
+    background-position: 0 -1200px;
+}
+
+.yui-skin-ux .yui-simple-dialog .bd span.warnicon {
+    background-position: 0 -1900px;
+}
+
+.yui-skin-ux .yui-simple-dialog .bd span.tipicon {
+    background-position: 0 -1250px;
+}
+
+
+/* Form Input Validation */
+
+.yui-skin-ux label.error {
+	margin-right: 0.75em;
+	margin-left: 0.75em;
+    color: red;
+}
+
+/* custom jQuery UI styles */
+div#loading_progressbar.ui-progressbar  {
+	height: 1.25em;
+}
+
+.yui-skin-ux #yui-main {
+    background-color: #EDF0F3;
+    border: 1px solid #D4D4D4;
+}
+
+
+.yui-skin-ux #content.yui-b h1.page-header {
+     margin-top: 0;
+}
+
+.yui-skin-ux .yui-panel .hd {
+    background: #444;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.yui-skin-ux .yui-panel .bd {
+    padding: 20px;
+}
+
+.yui-skin-ux .yui-panel .ft {
+    background: #FFF;
+    padding: 10px;
+}
+
+.yui-skin-ux .left {
+    float: left;
+}
+
+.yui-skin-ux .right {
+    float: right;
+}
+
+.yui-skin-ux .yui-ac-container {
+    position: absolute;
+}
+
+.yui-skin-ux .yui-ac-content {
+    background: #FFF none repeat scroll 0 0;
+    border: 1px solid #808080;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.yui-skin-ux .yui-ac-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+.yui-skin-ux .yui-ac-content li {
+    cursor:default;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    margin:0;
+    padding:2px 5px;
+    white-space:nowrap;
+}
+
+.yui-skin-ux .yui-ac-content li.yui-ac-highlight {
+    background: #B0B0B0 none repeat scroll 0 0;
+    color: #FFF;
+}
+
+.yui-skin-ux .yui-ac-content li span.match {
+    font-weight: bold;
+}
+
+.yui-skin-ux .disabled {
+    color: #a0a0a0;
+}
+
+.yui-skin-ux div .set-width {
+    width: 150px;
+}
+
+.yui-skin-ux .no-wrap {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.yui-skin-ux .info-warning {
+     padding: 1em;
+     background-color: #ffffcd;
+     border: 3px solid #fdd485;
+     font-size: 1.05em;
+     line-height: 2em;
+     clear: both;
+}
+
+.yui-skin-ux .permalink_block {
+    padding: 10px;
+    background: #F2F2F2;
+    border: 1px solid #D7D7D7;
+    borner-radius: 4px;
+}
+
+.yui-skin-ux div.page-setting div.page-setting-detail {
+    text-align: justify;
+    float: left;
+    width: 84%;
+}
+
+.yui-skin-ux div.page-setting div.page-setting-action {
+    float: right;
+    max-width: 14%;
+}
+
+.yui-skin-ux div.page-setting div.page-setting-footer {
+    clear: both;
+}
+
+.yui-skin-ux p.info {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+.yui-skin-ux tr td.cursor-pointer {
+    cursor: pointer;
+}
+
+.yui-skin-ux tr td.blue-text {
+    color: #0090FF;
+}
+
+.yui-skin-ux .bold {
+     font-weight: bold;
+ }
+
+/* CALENDARGROUP BOUNDING BOX */
+.yui-skin-ux .yui-calcontainer.multi {
+    padding:0 5px 0 5px;
+}
+
+/* BOUNDING BOX FOR EACH CALENDAR GROUP PAGE */
+.yui-skin-ux .yui-calcontainer.multi .groupcal {
+    background-color:transparent;
+    border:none;
+    padding:10px 5px 10px 5px;
+    margin:0;
+}
+
+/* TITLE BAR */
+.yui-skin-ux .yui-calcontainer .title {
+    border-bottom:1px solid #cccccc;
+    font:100% sans-serif;
+    color:#000;
+    font-weight:bold;
+    height:auto;
+    padding:.4em;
+    margin:0 -10px 10px -10px;
+    top:0;
+    left:0;
+    text-align:left;
+}
+
+.yui-skin-ux .yui-calcontainer.multi .title {
+    margin:0 -5px 0 -5px;
+}
+
+.yui-skin-ux .yui-calcontainer.withtitle {
+    padding-top:0;
+}
+
+/* CLOSE BUTTON */
+.yui-skin-ux .yui-calcontainer .calclose {
+    width:25px;
+    height:15px;
+    top:.4em;
+    right:.4em;
+    cursor:pointer;
+}
+
+/* CALENDAR TABLE */
+.yui-skin-ux .yui-calendar {
+    border-spacing:0;
+    border-collapse:collapse;
+    font:100% sans-serif;
+    text-align:center;
+    margin:0;
+}
+
+/* NAVBAR BOUNDING BOX */
+.yui-skin-ux .yui-calendar .calhead {
+    background:transparent;
+    border:none;
+    vertical-align:middle;
+    padding:0;
+}
+
+/* NAVBAR TEXT CONTAINER */
+.yui-skin-ux .yui-calendar .calheader {
+    background:transparent;
+    font-weight:bold;
+    padding:0 0 .6em 0;
+    text-align:center;
+}
+
+.yui-skin-ux .yui-calendar .calheader img {
+    border:none;
+}
+
+/* NAVBAR LEFT ARROW */
+.yui-skin-ux .yui-calendar .calnavleft {
+    background:url(../images/sprite.png) no-repeat 0 -450px;
+    width:25px;
+    height:15px;
+    top:0;
+    bottom:0;
+    left:-10px;
+    margin-left:.4em;
+    cursor:pointer;
+    color: black;
+    font-weight: bold;
+}
+
+/* NAVBAR RIGHT ARROW */
+.yui-skin-ux .yui-calendar .calnavright {
+    background:url(../images/sprite.png) no-repeat 0 -500px;
+    width:25px;
+    height:15px;
+    top:0;
+    bottom:0;
+    right:-10px;
+    margin-right:.4em;
+    cursor:pointer;
+    color: black;
+    font-weight: bold;
+}
+
+/* WEEKDAY HEADER ROW */
+.yui-skin-ux .yui-calendar .calweekdayrow {
+    height:2em;
+}
+
+.yui-skin-ux .yui-calendar .calweekdayrow th {
+    padding:0;
+    border:none;
+}
+
+/* WEEKDAY (Su, Mo, Tu...) HEADER CELLS */
+.yui-skin-ux .yui-calendar .calweekdaycell {
+    color:#000;
+    font-weight:bold;
+    text-align:center;
+    width:2em;
+}
+
+/* CALENDAR FOOTER. NOT IMPLEMENTED BY DEFAULT */
+.yui-skin-ux .yui-calendar .calfoot {
+    background-color:#f2f2f2;
+}
+
+/* WEEK NUMBERS (ROW HEADERS/FOOTERS) */
+.yui-skin-ux .yui-calendar .calrowhead, .yui-skin-ux .yui-calendar .calrowfoot {
+    color:#a6a6a6;
+    font-size:85%;
+    font-style:normal;
+    font-weight:normal;
+    border:none;
+}
+
+.yui-skin-ux .yui-calendar .calrowhead {
+    text-align:right;
+    padding:0 2px 0 0;
+}
+
+.yui-skin-ux .yui-calendar .calrowfoot {
+    text-align:left;
+    padding:0 0 0 2px;
+}
+
+/* NORMAL CELLS */
+.yui-skin-ux .yui-calendar td.calcell {
+    border:1px solid #cccccc;
+    background:#fff;
+    padding:1px;
+    height:1.6em;
+    line-height:1.6em; /* set line height equal to cell height to center vertically */
+    text-align:center;
+    white-space:nowrap;
+}
+
+/* LINK INSIDE NORMAL CELLS */
+.yui-skin-ux .yui-calendar td.calcell a {
+    color:#0066cc;
+    display:block;
+    height:100%;
+    text-decoration:none;
+}
+
+/* TODAY'S DATE */
+.yui-skin-ux .yui-calendar td.calcell.today {
+    background-color:#000;
+}
+
+.yui-skin-ux .yui-calendar td.calcell.today a {
+    background-color:#fff;
+}
+
+/* OOM DATES */
+.yui-skin-ux .yui-calendar td.calcell.oom {
+    background-color:#cccccc;
+    color:#a6a6a6;
+    cursor:default;
+}
+
+/* SELECTED DATE */
+.yui-skin-ux .yui-calendar td.calcell.selected {
+    background-color:#fff;
+    color:#000;
+}
+
+.yui-skin-ux .yui-calendar td.calcell.selected a {
+    background-color:#b3d4ff;
+    color:#000;
+}
+
+/* HOVER DATE */
+.yui-skin-ux .yui-calendar td.calcell.calcellhover {
+    background-color:#426fd9;
+    color:#fff;
+    cursor:pointer;
+}
+
+.yui-skin-ux .yui-calendar td.calcell.calcellhover a {
+    background-color:#426fd9;
+    color:#fff;
+}
+
+/* DEFAULT OOB DATES */
+.yui-skin-ux .yui-calendar td.calcell.previous {
+    color:#e0e0e0;
+}
+
+/* CUSTOM RENDERERS */
+.yui-skin-ux .yui-calendar td.calcell.restricted { text-decoration:line-through; }
+.yui-skin-ux .yui-calendar td.calcell.highlight1 { background-color:#ccff99; }
+.yui-skin-ux .yui-calendar td.calcell.highlight2 { background-color:#99ccff; }
+.yui-skin-ux .yui-calendar td.calcell.highlight3 { background-color:#ffcccc; }
+.yui-skin-ux .yui-calendar td.calcell.highlight4 { background-color:#ccff99; }
+
+/* CalendarNavigator */
+
+/* MONTH/YEAR LABEL */
+.yui-skin-ux .yui-calendar a.calnav {
+    border: 1px solid #f2f2f2;
+    padding:0 4px;
+    text-decoration:none;
+    color:#000;
+    zoom:1;
+}
+
+.yui-skin-ux .yui-calendar a.calnav:hover {
+    border-color:#A0A0A0;
+    cursor:pointer;
+}
+
+/* NAVIGATOR MASK */
+.yui-skin-ux .yui-calcontainer .yui-cal-nav-mask {
+    background-color:#000;
+    opacity:0.25;
+    *filter:alpha(opacity=25); /* IE */
+}
+
+/* NAVIGATOR BOUNDING BOX */
+.yui-skin-ux .yui-calcontainer .yui-cal-nav {
+    font-family:arial,helvetica,clean,sans-serif;
+    font-size:93%;
+    border:1px solid #808080;
+    left:50%;
+    margin-left:-7em;
+    width:14em;
+    padding:0;
+    top:2.5em;
+    background-color:#f2f2f2;
+}
+
+.yui-skin-ux .yui-calcontainer.withtitle .yui-cal-nav {
+    top:4.5em;
+}
+
+/* NAVIGATOR BOUNDING BOX */
+.yui-skin-ux .yui-calcontainer.multi .yui-cal-nav {
+    width:16em;
+    margin-left:-8em;
+}
+
+/* NAVIGATOR YEAR/MONTH/BUTTON/ERROR BOUNDING BLOCKS */
+.yui-skin-ux .yui-calcontainer .yui-cal-nav-y,
+.yui-skin-ux .yui-calcontainer .yui-cal-nav-m,
+.yui-skin-ux .yui-calcontainer .yui-cal-nav-b {
+    padding:5px 10px 5px 10px;
+}
+
+.yui-skin-ux .yui-calcontainer .yui-cal-nav-b {
+    text-align:center;
+}
+
+.yui-skin-ux .yui-calcontainer .yui-cal-nav-e {
+    margin-top:5px;
+    padding:5px;
+    background-color:#EDF5FF;
+    border-top:1px solid black;
+    display:none;
+}
+
+/* NAVIGATOR LABELS */
+.yui-skin-ux .yui-calcontainer .yui-cal-nav label {
+    display:block;
+    font-weight:bold;
+}
+
+/* NAVIGATOR MONTH CONTROL */
+.yui-skin-ux .yui-calcontainer .yui-cal-nav-mc {
+    width:100%;
+    _width:auto; /* IE6, IE7 Quirks don't handle 100% well */
+}
+
+/* NAVIGATOR MONTH CONTROL, VALIDATION ERROR */
+.yui-skin-ux .yui-calcontainer .yui-cal-nav-y input.yui-invalid {
+    background-color:#FFEE69;
+    border: 1px solid #000;
+}
+
+/* NAVIGATOR YEAR CONTROL */
+.yui-skin-ux .yui-calcontainer .yui-cal-nav-yc {
+    width:4em;
+}
+
+/* NAVIGATOR BUTTONS */
+
+/* BUTTON WRAPPER */
+.yui-skin-ux .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn {
+    border:1px solid #808080;
+    /*background: url(../../../../assets/skins/sam/sprite.png) repeat-x 0 0;*/
+    background-color:#ccc;
+    margin: auto .15em;
+}
+
+/* BUTTON (based on button-skin.css) */
+.yui-skin-ux .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn button {
+    padding:0 8px;
+    font-size:93%;
+    line-height: 2;  /* ~24px */
+    *line-height: 1.7; /* For IE */
+    min-height: 2em; /* For Gecko */
+    *min-height: auto; /* For IE */
+    color: #000;
+}
+
+/* DEFAULT BUTTONS */
+/* NOTE: IE6 will only pickup the yui-default specifier from the multiple class specifier */
+.yui-skin-ux .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn.yui-default {
+    border:1px solid #304369;
+    background-color: #426fd9;
+}
+
+.yui-skin-ux .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn.yui-default button {
+    color:#fff;
+}
+
+/***************
+ * YUI Buttons
+ ***************/
+
+    .yui-skin-ux .yui-button button,
+    .yui-skin-ux .yui-button a {
+        display: block;
+        border: none;
+        margin: 0;
+    }
+
+    .yui-skin-ux .yui-button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .yui-skin-ux .yui-button > .default {
+        background: #5AAC46;
+    }
+
+    .yui-skin-ux .yui-button a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .yui-skin-ux button.primary,
+    .yui-skin-ux .yui-push-button.default {
+        background: #5AAC46;
+        border-color: #5AAC46;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .yui-skin-ux button.primary:hover {
+        background: #4A8E39;
+        border-color: #4A8E39;
+        color: #fff;
+    }
+
+    .yui-skin-ux button.secondary {
+        background: #4887C3;
+        border-color: #4887C3;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .yui-skin-ux button.secondary:hover {
+        background: #3871A9;
+        border-color: #3871A9;
+        color: #fff;
+    }
+
+    .yui-skin-ux button,
+    .yui-skin-ux .yui-push-button {
+        background: #F2F2F2;
+        padding: 10px 20px;
+
+        border-width: 1px;
+        border-style: solid;
+        border-color: #D7D7D7;
+        border-radius: 5px;
+
+        cursor: pointer;
+        color: #666;
+
+        filter: none;
+    }
+
+    .yui-skin-ux button.small {
+        padding: .32em .6em;
+        font-weight: normal;
+    }
+
+    .yui-skin-ux .yui-push-button {
+            border-width: 1px;
+            border-style: solid;
+            border-color: #D7D7D7;
+            border-radius: 5px;
+    }
+
+    .yui-skin-ux .yui-push-button.default button {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .yui-skin-ux .yui-push-button button,
+    .yui-skin-ux .yui-dt-liner button {
+        padding: 0em;
+    }
+
+
+
+/*******************
+ * YUI Datatable
+ *******************/
+
+    .yui-skin-ux .yui-dt table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    .yui-skin-ux .yui-dt tr th.yui-dt-first {
+        border-left: 1px solid #83848F;
+    }
+
+    .yui-skin-ux .yui-dt th {
+        border-top: 1px solid #83848F;
+        border-right: 1px solid #83848F;
+
+    }
+
+    .yui-skin-ux .yui-dt tr td:first-child {
+        border-left: 1px solid #D7D7D7;
+    }
+
+    .yui-skin-ux .yui-dt td {
+        border-right: 1px solid #D7D7D7;
+        border-bottom: 1px solid #D7D7D7;
+    }
+
+    .yui-skin-ux .yui-dt-liner {
+        padding: 0.2em 0.6em;
+    }
+
+    .yui-skin-ux div.yui-dt-scrollable table {
+        width: auto;
+    }
+
+    .yui-skin-ux tr th.border-left-none,
+    .yui-skin-ux tr td.border-left-none {
+        border-left: none;
+    }
+
+    .yui-skin-ux tr th.border-right-none,
+    .yui-skin-ux tr td.border-right-none {
+        border-right: none;
+    }
+
+    .yui-skin-ux th.th-align-center {
+        text-align: center;
+    }
+
+    .yui-skin-ux tr td.align-right {
+        text-align: right;
+    }
+    .yui-skin-ux tr td.column-set-width {
+        min-width: 5em;
+        width: 5em;
+    }
+    .yui-skin-ux table .yui-dt-message tr,
+    .yui-skin-ux table .yui-dt-message tr td, {
+        border: none;
+    }
+    .yui-skin-ux tbody tr.yui-dt-last {
+    }
+
+    .yui-skin-ux .yui-dt-liner {
+        margin: 0;
+    }
+
+    .yui-skin-ux div.even-odd div.yui-dt-bd td
+    {
+        font-size: 1.0em;
+    }
+
+    .yui-skin-ux tr.yui-dt-even {
+        background: #fff;
+    }
+
+    .yui-skin-ux tr.yui-dt-odd {
+        background: #F2F2F2;
+    }
+
+    .yui-skin-ux .yui-dt thead {
+        background: #a4a4ae; /* Old browsers */
+        background: -moz-linear-gradient(top,  #a4a4ae 0%, #9898a5 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a4a4ae), color-stop(100%,#9898a5)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #a4a4ae 0%,#9898a5 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #a4a4ae 0%,#9898a5 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #a4a4ae 0%,#9898a5 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #a4a4ae 0%,#9898a5 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4a4ae', endColorstr='#9898a5',GradientType=0 ); /* IE6-9 */
+    }
+
+    .yui-skin-ux .yui-dt tr th,
+    .yui-skin-ux .yui-dt tr td {
+        padding: .4em .6em;
+    }
+
+    .yui-skin-ux .yui-dt thead th div,
+    .yui-skin-ux .yui-dt thead th div a {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .yui-skin-ux .yui-dt tr.yui-dt-odd {
+        background: #F2F2F2;
+    }
+
+    .yui-skin-ux td .icon-align {
+        padding: 0 .5em 0 0;
+    }
+
+    .yui-skin-ux td.yui-dt-col-group {
+        color: #999;
+        font-size: 0.85em;
+    }
+
+    .yui-skin-ux #contacts-table-info-block #contacts-list-groups table{
+        width: 95%;
+        table-layout: fixed;
+    }
+
+    .yui-skin-ux #contacts-table-info-block #contacts-list-groups .yui-dt-first {
+        width: 13%;
+    }
+
+    .yui-skin-ux #contacts-table-info-block #contacts-list-groups .yui-dt-data .yui-dt21-col-filterName div {
+        width: 270px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+
+    .yui-skin-ux .group-column div {
+        width: 90px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .yui-skin-ux .group-column span, .yui-skin-ux .group-column span a {
+        width: 90px;
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .yui-skin-ux .contact-list-name div {
+        width: 290px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    yui-dt-data .yui-dt-rec .yui-dt-liner div {
+        width: 300px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    #contacts-table-info-block #contacts-list .yui-dt-data td {
+        background: #fff;
+    }

@@ -1,0 +1,2961 @@
+#yui-history-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+}
+
+.yui-skin-ux .small-padding {
+    padding: .25em 0;
+}
+
+.yui-skin-ux .rejected-gift {
+    text-decoration: line-through;
+}
+
+.yui-skin-ux .misc-item {
+    font-size: 0.9em;
+    color: #999;
+}
+.yui-skin-ux div.billing-item {
+    clear: right;
+}
+.yui-skin-ux div.billing-item label {
+    float: right;
+    margin: 2px;
+}
+
+.yui-skin-ux div.billing-item input {
+    width: 120px;
+    float: right;
+    margin: 2px;
+}
+
+#bd-recent-activity .recent-activity-detail {
+    width: 250px;
+}
+
+td.groups-list-name {
+    width: 50%;
+    cursor: pointer;
+}
+
+th.groups-list-name div {
+    font-weight: bold;
+}
+
+tbody .groups-list-checkbox {
+    width: 5%;
+}
+
+#email-groups-content .yui-dt table {
+    width: 55%;
+}
+
+th.groups-list-contacts div {
+    text-align: right;
+    font-weight: bold;
+}
+
+tbody td.groups-list-contacts {
+    width: 45%;
+    text-align: right;
+}
+
+#email-groups-actions {
+    /*background: #D7FCFD;*/
+    height: 3em;
+    vertical-align: bottom;
+    /*border: 3px solid #D7FCFD;*/
+    position:relative;
+}
+
+#email-add-group-button {
+    position: absolute;
+    left: 0;
+}
+
+#email-add-group-button a {
+    color: #666;
+}
+
+#group_actions {
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+}
+
+#captainsMessageEditText {
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+    height: 15em;
+}
+
+#msg_cat_captains_message_empty {
+    margin-bottom: 1em;
+}
+
+#captainsMessage #captainsMessageEditLink {
+    text-align: right;
+}
+
+#teamCaptains {
+    display: none;
+}
+
+#teamCaptains .hd,
+#teamCaptains .bd {
+    padding: .1em 0;
+}
+
+.right-nav-link #msg_cat_team_captains_manage_link {
+    font-weight: normal;
+}
+
+#bd-donation-history h3 {
+    padding: 0 0 0.75em;
+}
+
+#bd-donation-history #donation_history .date-item {
+    color: #999;
+}
+
+#bd-donation-history #donation_history td {
+    margin: 0;
+    text-align: left;
+}
+
+#bd-donation-history #donation_history td.align-right
+{
+    text-align: right;
+    padding-right: .5em;
+}
+
+#bd-donation-history #donation_history .yui-dt-data,
+#bd-donation-history #donation_history div {
+    outline: none;
+}
+
+#bd-donation-history #donation_history .yui-dt-liner {
+    margin: 0;
+    padding: 0.3em 0.6em;
+}
+
+#bd-donation-history #donation_history td.yui-dt-first .yui-dt-liner {
+    padding-left: 0;
+}
+
+.#bd-donation-history #donation_history td.yui-dt-last .yui-dt-liner {
+    padding-right: 0;
+}
+
+#bd-donation-history #donation_history .yui-dt-col-confirmed {
+    color: #999;
+    font-size: 0.9em;
+}
+
+#bd-donation-history #gift-notification-block {
+    margin-bottom: 1em;
+}
+
+div#email-wizard-contacts thead {
+    background: #a4a4ae; /* Old browsers */
+    background: -moz-linear-gradient(top,  #a4a4ae 0%, #9898a5 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a4a4ae), color-stop(100%,#9898a5)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #a4a4ae 0%,#9898a5 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #a4a4ae 0%,#9898a5 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #a4a4ae 0%,#9898a5 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #a4a4ae 0%,#9898a5 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4a4ae', endColorstr='#9898a5',GradientType=0 ); /* IE6-9 */
+}
+
+div#email-wizard-contacts th,
+    div#email-wizard-contacts th a {
+        color: #fff;
+        font-weight: bold;
+    }
+
+#view-teammates-container {
+    width: 450px;
+}
+
+#view-teammates-table tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+#view-teammates-table {
+    table-layout:fixed;
+    width: 450px;
+    padding-left: 100px;
+    text-align: left;
+}
+
+#view-teammates-table tr {
+    height: 1em;
+}
+
+#view-teammates-table td {
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display:inline-block;zoom:1;*display:inline;
+}
+
+#view-teammates-table-container {
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    width: 450px;
+    border: 1px solid #ddd;
+}
+
+#teammates-content-actions {
+    float: right;
+    margin: 15px 0;
+    padding: 0;
+}
+
+.yui-skin-ux .chart-legend li {
+    float: right;
+    margin-right: 2.5em;
+}
+
+.yui-skin-ux ul.chart-legend li {
+    padding-left: 20px;
+    font-size: 0.8em;
+}
+
+.yui-skin-ux .gifts-made {
+    background: url(../images/green_dot.gif) 10px center no-repeat;
+}
+
+.yui-skin-ux .emails-sent {
+    background: url(../images/blue_dot.gif) 10px center no-repeat;
+}
+
+.yui-skin-ux #top-donors ol,
+.yui-skin-ux #top-team-donors ol{
+    padding-left: 1.5em;
+}
+
+.yui-skin-ux #top-donors ol li,
+.yui-skin-ux #top-team-donors ol li {
+    list-style-type: decimal;
+}
+
+.yui-skin-ux #top-donors li,
+.yui-skin-ux #top-team-donors li{
+    padding: 0.2em 0;
+}
+
+.yui-skin-ux #report-chart,
+.yui-skin-ux #team-report-chart,
+.yui-skin-ux #company-report-chart {
+    height: 20em;
+    padding: 5px;
+}
+
+.yui-skin-ux .roster table {
+    width: 43%;
+    font-size: 0.9em;
+}
+
+.yui-skin-ux .roster .col-1 {
+    float: left;
+    border: none;
+}
+
+.yui-skin-ux .roster .col-2 {
+    float: right;
+    border: none;
+}
+
+.yui-skin-ux .roster table td {
+    padding: 0.15em 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.yui-skin-ux .roster table .amount {
+    width: 6em;
+}
+
+.yui-skin-ux div#bd-team-roster-block div#members-left-column div div,
+.yui-skin-ux div#bd-team-roster-block div#members-right-column div div {
+    border-bottom: 1px solid #E0E0E0;
+    padding: 3px 0;
+}
+
+.yui-skin-ux div#bd-team-roster-block div.name-field {
+    width: 250px;
+    float: left;
+}
+
+.yui-skin-ux div#bd-team-roster-block div.amount-field {
+    float: right;
+}
+
+.yui-skin-ux #members-left-column {
+    float: left;
+}
+
+.yui-skin-ux #members-right-column {
+    float: right;
+}
+
+.yui-skin-ux div#bd-company-teams-block div#members-left-column div div,
+.yui-skin-ux div#bd-company-teams-block div#members-right-column div div {
+    border-bottom: 1px solid #E0E0E0;
+    padding: 3px 0px;
+}
+
+.yui-skin-ux div#bd-company-teams-block div.name-field {
+    width: 250px;
+    float: left;
+}
+
+.yui-skin-ux div#bd-company-teams-block div.amount-field {
+    float: right;
+}
+
+.yui-skin-ux #send-info-table td {
+    vertical-align: top;
+}
+
+.yui-skin-ux #hint-block {
+    color: #777;
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+}
+
+.yui-skin-ux #send-info-table .compose-section-input-field {
+    padding-bottom: 4px;
+}
+
+.yui-skin-ux #save-template {
+    vertical-align: text-bottom;
+}
+
+.yui-skin-ux #prepend-salutation {
+   vertical-align: text-bottom;
+}
+
+.yui-skin-ux #msg_cat_compose_salutation_hint {
+    color: #777;
+    font-size: 0.8em;
+}
+
+.yui-skin-ux #msg_cat_compose_salutation_hint a {
+    font-size:0.9em;
+}
+
+.yui-skin-ux #personal-templates {
+    padding-bottom: 4px;
+}
+
+.yui-skin-ux #email-compose-templates li img {
+    vertical-align: text-bottom;
+}
+
+.yui-skin-ux #email-compose-templates ul {
+    padding: 2px 0px 2px 0px;
+}
+
+.yui-skin-ux #email-compose-templates ul li {
+    display: inline-block;
+    zoom:1; /* Oh IE, how you pain my soul! */
+    *display:inline; /* Oh IE, how you pain my soul! */
+    padding: 0.25em 1em 0.25em 0em;
+}
+
+.yui-skin-ux #contacts_showing_selected {
+    background: #777;
+    padding: 1px 3px 1px 3px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.yui-skin-ux #email-compose-templates ul li a {
+    /* just inherit link attributes */
+}
+
+.yui-skin-ux #email-compose-templates ul li a:hover {
+    background-color: #ddd;
+}
+
+.yui-skin-ux #msg_cat_email_compose_use_template_hint {
+    color: #777;
+}
+
+.yui-skin-ux #email-compose-salutation {
+    background: #F1F7F8;
+    padding: 3px;
+    padding-bottom: 5px;
+}
+.yui-skin-ux #email-compose-prepend-salutation {
+    background: #eee;
+    padding: 4px;
+    margin: 0;
+    border: 1px solid #D4D4D4;
+    border-bottom: 0;
+}
+
+.yui-skin-ux #email-compose-templates {
+    margin-left: 1.25em;
+    padding: 2px 2px 4px 2px;
+    vertical-align: bottom;
+}
+
+.yui-skin-ux #email-compose-top {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 0;
+    margin: 0;
+}
+
+.yui-skin-ux .compose-section-name-field {
+    width: 4em;
+}
+
+.yui-skin-ux .compose-section-name-field label {
+    display: block;
+    padding-right: 0.3em;
+    text-align: right;
+}
+
+.yui-skin-ux .compose-section-input-field #email-addresses {
+    width: 98%;
+}
+
+.yui-skin-ux .compose-section-input-field #email-subject {
+    width: 97%;
+    padding: .3em;
+    margin-top: 1.55em;
+    margin-left: .5em;
+}
+
+.yui-skin-ux .personal-template {
+    padding-right: 2em;
+    white-space: nowrap;
+    vertical-align: text-bottom;
+}
+.yui-skin-ux .w100 {
+    width: 100%;
+}
+.yui-skin-ux #send-info-table {
+    width: 100%;
+}
+.yui-skin-ux #send-info-table tr {
+    padding: 50px;
+}
+
+.yui-skin-ux #email-layout-selected {
+    margin: 0 1px 0 1px;
+    padding-left: 3px;
+    background: #eee;
+    outline: 1px solid #ccc;
+    color: #777;
+}
+.yui-skin-ux #msg_cat_compose_current_layout_label {
+    font-weight: bold;
+}
+
+.yui-skin-ux #layout-block {
+    border: 1px solid #D4D4D4;
+    border-top: 0;
+}
+
+.yui-skin-ux #layout-block img {
+    display: block;
+    margin-bottom: 2px;
+    border: 1px solid #ccc;
+}
+
+.yui-skin-ux #layout-block #layout-list {
+    padding: 0.6em 0 0.6em 9px;
+    background: #f6f6f6;
+}
+
+.yui-skin-ux #layout-block #layout-list li {
+    float: left;
+    text-align: center;
+    padding: 10px 12px;
+}
+
+.yui-skin-ux #layout-list li.column-1 {
+    clear: left;
+}
+
+.yui-skin-ux #layout-list li a {
+    display: block;
+    padding: 4px;
+    border: 3px solid #f6f6f6;
+    text-decoration: none;
+    outline: none;
+    font-size: 0.9em;
+}
+
+.yui-skin-ux #layout-list li a:hover {
+    background: #fdfced;
+    border-color: #fef793;
+}
+
+.yui-skin-ux #layout-list li.selected a {
+    background: #d7fcfd;
+    border-color: #dbdbdb;
+    color: #333;
+}
+
+.yui-skin-ux #layout-list li a span {
+    display: block;
+}
+
+.yui-skin-ux #layout-list li a label {
+    cursor: pointer;
+}
+
+.yui-skin-ux .rich_text_block {
+    margin-bottom: 0;
+}
+
+.yui-skin-ux #preview-section table input {
+    display: none;
+}
+
+.yui-skin-ux .yui-panel .ft-right {
+    text-align: right;
+}
+
+.yui-skin-ux #preview-block {
+    height: 500px;
+}
+
+.yui-skin-ux #preview-block .bd {
+    background-color: #FFF;
+    height: 400px;
+    overflow: auto;
+}
+
+.yui-skin-ux .preview {
+    width: 650px;
+    height: 510px;
+}
+
+.yui-skin-ux #draft-info-block {
+    background:#D7FCFD none repeat scroll 0 0;
+    padding:0 1em 0.5em;
+}
+
+.yui-skin-ux #draft-info-block h1 {
+    padding-left: 0;
+}
+
+.yui-skin-ux .templateHighlight {
+    width: 95%;
+}
+
+#email-compose-templates .selected a.template-link {
+    background: #777;
+    padding: 1px 3px 1px 3px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.yui-skin-ux a.personal-side-menu-item:hover span,
+.yui-skin-ux a.personal-side-menu-item:active span {
+    background-color: #67707A;
+    color: #FFF;
+}
+
+#personal_page_title, #company_page_title {
+    width: 99%;
+    font-size: 1.5em;
+}
+
+.yui-skin-ux .page-preview-desc {
+    color:#777;
+    font-size:0.8em;
+    padding-top: 0.5em;
+}
+
+.yui-skin-ux #privacy-edit-block {
+    margin-bottom: 0.5em;
+    padding-left: 1em;
+}
+
+.yui-skin-ux #privacy-edit-block input {
+    position: relative;
+    top: 0.2em;
+}
+
+
+/** Dashboard Participant Info Block - Company Affiliation */
+.yui-skin-ux #participant-info-block {
+    margin-bottom: 1em;
+    color: #000;
+    font-size: 1.1em;
+}
+
+.yui-skin-ux #participant-info-block .section {
+    margin-bottom: 0.5em;
+}
+
+.yui-skin-ux #participant-info-block div.label {
+    margin-bottom: 0.2em;
+    color: #666;
+    font-size: 0.8em;
+}
+
+.yui-skin-ux #participant-info-block div#participant-company-info-edit{
+    text-align: right;
+    font-size: 0.9em;
+}
+
+/* MEDIA UPLOAD */
+.yui-skin-ux .media {
+    padding: 1.5em;
+    background: #EEEEEE;
+}
+
+.yui-skin-ux .personal .media {
+    margin-left: 1.5em;
+}
+
+.yui-skin-ux #photo2 {
+    margin-bottom: 2em;
+    padding-top: 0;
+}
+
+.yui-skin-ux #photo2 .inner {
+    padding-top: 1.5em;
+    border-top: 1px solid #ccc;
+}
+
+.yui-skin-ux .media-type {
+    position: relative;
+    top: 0.18em;
+    left: -0.2em;
+}
+
+.yui-skin-ux .thumbnail {
+    float: left;
+    width: 125px;
+    max-height: 125px;
+}
+
+.yui-skin-ux .no-image {
+    float: left;
+    width: 125px;
+    padding: 50px 0;
+    background: #fff;
+    text-align: center;
+    color: #999;
+    font-size: 0.9em;
+    border: 1px solid #CCC;
+    font-style: oblique;
+}
+
+.yui-skin-ux .media form {
+    margin-left: 150px;
+}
+
+.yui-skin-ux .media .browse,
+.yui-skin-ux .media .caption {
+    margin-bottom: 1em;
+}
+
+.yui-skin-ux .csv-upload {
+    padding: 1em;
+}
+.yui-skin-ux .csv-upload .browse {
+    margin-bottom: 1em;
+}
+
+.yui-skin-ux .media .caption label,
+.yui-skin-ux .video .caption .label-wrap {
+    display: block;
+    margin-bottom: 0.2em;
+}
+
+.yui-skin-ux .video .caption label {
+    display: inline;
+}
+
+.yui-skin-ux .media .caption .url-example {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.yui-skin-ux #msg_cat_photo_upload2_layout_caution {
+    font-size:0.8em;
+    font-style: italic;
+    margin-top: 1em;
+}
+
+/* COMPONENTS */
+.yui-skin-ux .comp {
+    margin-bottom: 1em;
+}
+.yui-skin-ux .comp-desc {
+    margin-left: 2em;
+    background-color: #F2F2F2;
+    padding: 0.8em;
+    border: 1px solid #D7D7D7;
+}
+.yui-skin-ux .comp-check {
+    float: left;
+    margin-top: 0.7em;
+}
+.yui-skin-ux .comp-label {
+    font-weight: bold;
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.yui-skin-ux .comp-sub {
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    border-top: 2px solid #cecece;
+    clear: both;
+}
+
+.yui-skin-ux #msg_cat_personal_page_honor_roll_donor_names_only {
+    margin-left: 0.2em;
+}
+.yui-skin-ux #pp-honor-roll-donors-only {
+    position: relative;
+    top: 0.15em;
+}
+/* TEAM */
+.yui-skin-ux #team-info-block {
+    margin-bottom: 1em;
+    color: #000;
+    font-size: 1.1em;
+}
+
+.yui-skin-ux #team-info-block .section {
+    margin-bottom: 0.5em;
+}
+
+.yui-skin-ux #team-info-block div.label {
+    margin-bottom: 0.2em;
+    color: #666;
+    font-size: 0.8em;
+}
+
+.yui-skin-ux #team-info-block div#team-info-edit{
+    text-align: right;
+    font-size: 0.9em;
+}
+
+/* CONTACTS ACTIONS */
+
+.yui-skin-ux #contacts_pagination_block .pagination_block .paginatorContactSelector {
+    float: left;
+}
+
+.yui-skin-ux #contacts_pagination_block .pagination_block .paginatorPageSize {
+    float: none;
+    padding-right: 1em;
+}
+
+.yui-skin-ux #contacts-actions {
+    position: relative;
+    z-index: 2;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.yui-skin-ux .groups_menu_container {
+    display:inline-block;zoom:1;*display:inline;
+    margin-right: -5px;
+}
+
+.yui-skin-ux .groups_menu_container button {
+    color: #0090ff;
+}
+
+.yui-skin-ux #groups_menu_container,
+.yui-skin-ux span#detailsGroupsMenuButton {
+    background: url(../images/groupPeople.gif) no-repeat left;
+}
+
+.yui-skin-ux .groups_menu_container .yui-button {
+    padding: 0.2em 1.5em 0.2em 1.8em;
+    margin: 0;
+    background: url(../images/downArrow.gif) no-repeat top right;
+    border: 0;
+}
+
+.yui-skin-ux .contacts-actions .button {
+    margin-right: -3px;
+    padding: 0.2em 0.5em;
+    border: none;
+    text-decoration: none;
+}
+
+.yui-skin-ux .large-amount-text {
+    font-size: 1.1em;
+}
+
+.yui-skin-ux #msg_cat_contacts_send_message_button,
+.yui-skin-ux #msg_cat_contact_details_compose
+{
+    padding-left: 20px;
+    background: url(../images/contacts_message.gif) left center no-repeat;
+}
+
+.yui-skin-ux #msg_cat_contacts_email_all_button
+{
+    padding-left: 27px;
+    background: url(../images/contacts_message.gif) 7px center no-repeat;
+    margin: 0;
+}
+
+.yui-skin-ux #msg_cat_contacts_delete_button,
+.yui-skin-ux #msg_cat_sent_message_delete_label {
+    padding-left: 25px;
+    background: url(../images/contacts_trash.gif) 7px center no-repeat;
+}
+
+.yui-skin-ux #msg_cat_contact_details_edit_info {
+    padding-left: 30px;
+    background: url(../images/contacts_edit.gif) 10px center no-repeat;
+}
+
+.yui-skin-ux #msg_cat_sent_message_forward_label {
+    padding-left: 20px;
+    background: url(../images/contacts_forward.gif) left center no-repeat;
+}
+
+.yui-skin-ux .groups_menu_container,
+.yui-skin-ux #msg_cat_contacts_delete_button,
+.yui-skin-ux #msg_cat_contact_details_edit_info,
+.yui-skin-ux #msg_cat_sent_message_delete_label,
+.yui-skin-ux #msg_cat_contacts_email_all_button {
+    border-left: 1px solid #fff;
+}
+
+.yui-skin-ux .groups_menu_container,
+.yui-skin-ux #msg_cat_contacts_send_message_button,
+.yui-skin-ux #msg_cat_contact_details_compose,
+.yui-skin-ux #msg_cat_sent_message_forward_label,
+.yui-skin-ux #msg_cat_contacts_delete_button {
+    border-right: 1px solid #ddd;
+}
+
+#contacts-content-header {
+    padding-top: 0;
+}
+
+#contacts-content-header2 {
+    padding-top: 0;
+}
+#contacts-list-switch-tab {
+    position: relative;
+	margin: 12px 0px 10px 0px;
+}
+#contacts-list-switch-tab div {
+    background: #F4F4F4;
+    padding: 5px 15px;
+    color: #999999;
+}
+#contacts-list-switch-tab div.left-tab {
+    border-radius: 4px 0px 0px 4px;
+    -moz-border-radius: 4px 0px 0px 4px;
+    -webkit-border-radius: 4px 0px 0px 4px;
+    border: 1px solid #D7D7D7;
+}
+#contacts-list-switch-tab div.right-tab {
+    border-radius: 0px 4px 4px 0px;
+    -moz-border-radius: 0px 4px 4px 0px;
+    -webkit-border-radius: 0px 4px 4px 0px;
+    border-top: 1px solid #D7D7D7;
+    border-right: 1px solid #D7D7D7;
+    border-bottom: 1px solid #D7D7D7;
+}
+#contacts-list-switch-tab div.selected {
+	background: #F7F7F7;
+
+}
+#contacts-list-switch-tab a {
+    text-decoration: none;
+    margin-left: 0em;
+    margin-right: 0em;
+    font-size: 1.2em;
+    outline: medium;
+}
+#contacts-list-switch-tab div.selected a {
+    color: #444444;
+    font-weight: bold;
+}
+#count_selected_block #msg_cat_contacts_selected,
+#count_groups_selected_block #msg_cat_contacts_groups_selected {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+#count_selected_block #count_selected,
+#count_groups_selected_block #count_groups_selected {
+    padding-left: 1em;
+    font-size: 1.3em;
+}
+#select-links-clear-block {
+    background-color: #dddddd;
+}
+
+.yui-skin-ux #contacts-table-header
+{
+    width: 100%;
+    font-size: 0.9em;
+    background-color: #F4F5F5;
+    padding-bottom:.2em;
+}
+
+#count_selected, #count_groups_selected {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#contacts-showing {
+    display: none;
+}
+/* END CONTACTS ACTIONS */
+
+/* CONTACTS GROUP TABLE */
+.yui-skin-ux #group-list-content-block {
+    width: 49.5%;
+}
+
+.yui-skin-ux #contacts-table-info-block {
+    width: 100%;
+}
+
+.yui-skin-ux #contacts-table-info-block .full {
+    width: 100%;
+}
+
+.yui-skin-ux #contacts-table-info-block .partial {
+    width: 50%;
+}
+
+.yui-skin-ux #contacts-list-groups table td {
+    padding-top: .3em;
+    padding-bottom: .3em;
+    cursor: pointer;
+}
+.yui-skin-ux #contacts-list-groups table tr.filter-type {
+    background-color: #F1EFEF;
+    border-bottom: 3px double #FFF;
+}
+.yui-skin-ux #contacts-list-groups table tr.filter-type td {
+    border-top: 1px solid #F1EFEF;
+    border-bottom: 1px solid #F1EFEF;
+}
+.yui-skin-ux #contacts-list-groups table tr.yui-dt-selected td.yui-dt-first{
+    border-left: 3px solid #0090FF;
+}
+.yui-skin-ux #contacts-list-groups table tr td span.underline {
+    text-decoration: underline;
+}
+.yui-skin-ux #contacts-list-groups td p.members-label {
+    padding-left: .5em;
+}
+.yui-skin-ux #contacts-list-groups table tr.yui-dt-selected td {
+    text-decoration: none;
+}
+/* END CONTACTS GROUP TABLE */
+
+.yui-skin-ux #email-contacts-content td .contact-list-icons {
+     padding:0;
+}
+
+.yui-skin-ux #contacts_content_header .search {
+    display: none;
+}
+
+.yui-skin-ux tbody .contact-list-name {
+    cursor: pointer;
+}   
+
+.yui-skin-ux tbody th .contact-list-name,
+.yui-skin-ux tbody .contact-list-email {
+    text-decoration: underline;
+}
+
+.yui-skin-ux .yui-dt #email-contacts-content tr th {
+    background-color: #EEEEEE;
+}
+
+.yui-skin-ux #email-contacts-content td .date-item {
+    color: #AAAAAA;
+    font-size: 0.93em;
+}
+
+.yui-skin-ux #contacts-list-groups td .gray-item,
+.yui-skin-ux #email-contacts-content td .gray-item {
+    color: #AAAAAA;
+}
+
+.yui-skin-ux #email-contacts-content td .contact-list-name {
+    text-decoration: underline;
+}
+
+.yui-skin-ux #email-contacts-content td .email-address {
+    color: #0090FF;
+    cursor: pointer;
+}
+.yui-skin-ux #email-contacts-content td div.follow-up {
+    text-align: right;
+}
+.yui-skin-ux #email-contacts-content td div .follow-up a:hover  {
+    src: images/followup-hover.png;
+}
+
+
+.yui-skin-ux .contacts-showing label {
+    color: #777;
+}
+.yui-skin-ux .contacts-showing ul {
+    display: inline;
+}
+.yui-skin-ux .contacts-showing .hidden-form {
+    display: none;
+}
+.yui-skin-ux .contacts-showing ul li {
+    display: inherit;
+    *display: inline;
+    padding-right: 1.2em;
+    cursor: pointer;
+}
+
+.yui-skin-ux #contacts_show_all_block {
+    border-top: 1px solid #ccc;
+    margin-top: .5em;
+    position: absolute;
+    left: 0;
+    top: 1.5em;
+    background-color: #eee;
+    width: 100%;
+    z-index: 1;
+}
+.yui-skin-ux #contacts_show_all_block div {
+    margin: .5em;
+}
+.yui-skin-ux .contacts-showing ul li a {
+    color: #777;
+}
+.yui-skin-ux #contacts_show_all_block div.label-block {
+    border-bottom: 1px dotted #ccc;
+    font-size: 1.1em;
+    padding-top: .5em;
+}
+.yui-skin-ux .contacts-showing ul li.selected a,
+.yui-skin-ux .contacts-showing ul li.selected a:hover {
+    text-decoration: none;
+    cursor: default;
+    background-color: #eee;
+}
+.yui-skin-ux .contacts-showing ul li a:hover {
+    background-color: #ddd;
+}
+
+.yui-skin-ux .contacts-showing {
+    xmargin: -0.5em 0 1em;
+    margin-bottom: 1em;
+    padding: .5em;
+    background: #eee;
+    font-size: 0.9em;
+}
+.yui-skin-ux .contacts-showing .primary-label {
+    font-weight: bold;
+    font-size: 1em;
+    padding-right: .5em;
+}
+.yui-skin-ux #contacts-showing {
+    position: relative;
+}
+.yui-skin-ux #contacts_filters_actions {
+    padding: 0 1em;
+}
+.yui-skin-ux div #contacts-list-content-block div.groups-view tr th.border-right-double,
+.yui-skin-ux div #contacts-list-content-block div.groups-view tr td.border-right-double {
+    border-right: 1px solid #eaeaea;
+}
+.yui-skin-ux div #contacts-list td.td-align-top,
+.yui-skin-ux div #contacts-list-groups td.td-align-top {
+    padding-top: .4em;
+    vertical-align: top;
+}
+.yui-skin-ux #contacts-list tr td.left-group-border {
+    border-left: 3px solid #0090FF;
+}
+
+
+/* ADD TO GROUP MENU */
+
+.yui-skin-ux .groups_menu_container button {
+    outline: none;
+}
+.yui-skin-ux .groups_menu_container .yuimenu {
+    border: 1px solid #D4D4D4;
+    background: #FFFFFF;
+    font-size: 11px;
+    padding: 10px;
+    box-shadow: 3px 3px 4px #555555;
+}
+
+.yui-skin-ux .groups_menu_container .yuimenu a {
+    outline: none;
+    text-decoration: none;
+    color: #333333;
+}
+
+.yui-skin-ux .groups_menu_container .yuimenuitem :hover {
+    background: #EDF0F3;
+}
+
+.yui-skin-ux #contact_name_and_email {
+    padding: 0 0 1.2em;
+}
+
+.yui-skin-ux #content-header h1 {
+    margin-right: 0.4em;
+}
+
+.yui-skin-ux #contact_name,
+.yui-skin-ux #contact_name_email_pipe {
+    display: inline;
+    padding: 0;
+    font-size: 1.5em;
+}
+
+div.progress-bar-outer {
+	width: 701px;
+    background-color: #e9e9e9;
+    height: 30px;
+    border: 1px solid #D7D7D7;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+    background-image: -ms-linear-gradient(top, #F0F0F0, #FCFCFC);
+    background-image: -webkit-linear-gradient(top, #F0F0F0, #FCFCFC);
+    background-image: -moz-linear-gradient(top, #F0F0F0, #FCFCFC);
+    background-image: -o-linear-gradient(top, #F0F0F0, #FCFCFC);
+    background-image: linear-gradient(top, #F0F0F0, #FCFCFC);
+}
+
+div.progress-bar-inner {
+    background-color: #5CB04A;
+    height: 30px;
+    width: 0;
+    border: 1px solid #459132;
+
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+
+    -moz-box-shadow: 0 1px 1px #AAD79D inset;
+    -webkit-box-shadow: 0 1px 1px #AAD79D inset;
+    box-shadow: 0 1px 1px #AAD79D inset;
+}
+
+.yui-skin-ux .fundraising-progress {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.yui-skin-ux .fundraising-progress #msg_cat_progress_team_progress,
+.yui-skin-ux .fundraising-progress #progress-team-progress-value,
+.yui-skin-ux .fundraising-progress #msg_cat_progress_team_goal,
+.yui-skin-ux .fundraising-progress #progress-team-goal-value
+{
+    display: none;
+}
+
+.yui-skin-ux .button-aligned {
+    padding: .25em 0 .25em 1em;
+}
+
+.yui-skin-ux #captainsMessage #captainsMessageEditLink {
+    text-align: right;
+}
+.yui-skin-ux #teamCaptains {
+    display: none;
+}
+.yui-skin-ux #teamCaptains .hd,
+.yui-skin-ux #teamCaptains .bd {
+    padding: .1em 0;
+}
+.yui-skin-ux .right-nav-link #msg_cat_team_captains_manage_link {
+    font-weight: normal;
+}
+
+#msg_cat_contact_details_groups_header {
+	padding: 5px 5px 5px 25px;
+}
+
+#progress-contactdetails-goal-value {
+	padding: 10px 10px 0px 10px;
+}
+
+.yui-skin-ux .contact-detail-group {
+    padding-bottom: 10px;
+    color: #666;
+    white-space: nowrap;
+}
+
+
+/* needs to be taken out */
+.yui-skin-ux .contact-detail-group img {
+    opacity:0.75;
+    filter:alpha(opacity=75);
+}
+
+.yui-skin-ux .contact-detail-group img:hover {
+    opacity:1;
+    filter:alpha(opacity=100);
+    cursor: pointer;
+}
+
+.yui-skin-ux #contact_details_history {
+    color: #333;
+}
+
+.yui-skin-ux .contact-activity-main {
+    padding: 0.4em 0 0.2em 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.yui-skin-ux .contact-activity-headline,
+.yui-skin-ux .contact-activity-body {
+    margin-bottom: 0.2em;
+}
+
+.yui-skin-ux .contact-activity-headline {
+    position: relative;
+}
+
+.yui-skin-ux .contact-activity-subject {
+    font-weight: bold;
+    text-align: left;
+}
+
+.yui-skin-ux .contact-activity-date {
+    position: absolute;
+    right: 0;
+    *right: 1.8em;
+    font-size: 0.8em;
+    color: #999;
+}
+
+#msg_cat_contact_details_history_label,
+#msg_cat_contact_details_part_of_groups {
+	font-weight: bold;
+}
+
+.yui-skin-ux #contact_details_list {
+    font-size: 0.9em;
+}
+
+.yui-skin-ux .header {
+    background: #D7FCFD;
+    padding: 0.5em 1em;
+}
+
+.yui-skin-ux #page-form p {
+    clear: both;
+}
+
+.yui-skin-ux #page-form label {
+    width: 10em;
+}
+
+.yui-skin-ux #page-form #gift_display_personal_page {
+    margin-left: 7.75em;
+}
+
+#gift_aid_declaration {
+     margin-left: 10.75em;
+}
+
+.yui-skin-ux #page-form .checkbox-label {
+    float: none;
+}
+
+.yui-skin-ux #page-form #msg_cat_gift_payment_type_label {
+    margin-top: 0.6em;
+}
+
+.yui-skin-ux #page-form #payment-radio-choices {
+    width: auto;
+    border-right: none;
+    border-bottom: none;
+}
+
+.yui-skin-ux #page-form #payment-radio-choices label {
+    float: none;
+}
+
+.yui-skin-ux #page-form #payment-radio-choices td {
+    padding-right: 0.5em;
+}
+
+.yui-skin-ux #page-form .info-field {
+    width: 25em;
+    text-align: left;
+}
+
+.yui-skin-ux .actions {
+    padding-top: 1em;
+}
+
+.yui-skin-ux .question-container {
+    padding: 0 0 1em .5em;
+    margin: 1.2em 0;
+}
+
+/* QUESTION HINT TEXT */
+.Hint{
+    font-size: 80%;
+    font-style: italic;
+}
+.yui-skin-ux #team_members_list {
+    padding: 1em;
+}
+
+.yui-skin-ux #members_list_left {
+    float: left;
+    width: 47%;
+}
+
+.yui-skin-ux #members_list_right {
+    margin-left: 53%;
+}
+
+.yui-skin-ux #team_members_list li {
+    padding: 0.2em 0;
+}
+
+.yui-skin-ux #team_members_list input {
+    position: relative;
+    top: 0.15em;
+    margin-right: 0.5em;
+}
+
+.yui-skin-ux .captain-name {
+    margin-right: 0.6em;
+}
+
+.yui-skin-ux .captain-marker {
+    padding: 0.2em 0.5em;
+    font-size: .8em;
+    background-color: #bbb;
+    text-transform: uppercase;
+    color: #fff;
+}
+.yui-skin-ux .tenting-status {
+    padding: .25em 0 .25em 0em;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.yui-skin-ux #tenting-search {
+    position: relative;
+}
+
+.yui-skin-ux .search-input {
+    position: absolute;
+    left: 22%;
+}
+
+.yui-skin-ux .search-row {
+    padding: .25em 0 .25em 0em;
+}
+
+.yui-skin-ux #tenting-message-content {
+    width: 80%;
+    height: 5em;
+}
+
+div.tenting-status {
+	margin-bottom: 20px;
+}
+
+#msg_cat_tenting_your_status_label,
+#msg_cat_tenting_your_tentmate_label {
+	font-weight: normal;
+}
+
+#msg_cat_tenting_search_button {
+	margin: 40px 0px 30px 0px;
+}
+
+#bd-decline-tent,
+#bd-tenting-invite2 {
+	margin-bottom: 30px;
+}
+
+#bd-reset-tent {
+	margin-top: 30px;
+}
+
+#tenting-content-header {
+	padding: 0px;
+}
+
+#bd-tenting-invite {
+	margin-bottom: 20px;
+}
+
+#optimalBrowserDiv {
+    margin-top: 1em;
+}
+
+#optimalBrowserList {
+    padding-left: 2em;
+    margin-top: 1em;
+}
+
+#optimalBrowserList li {
+    list-style: disc;
+}
+
+.yui-skin-ux .yui-dt-liner .contactName {
+    font-weight: bold;
+}
+
+.yui-skin-ux .addressbookimport-flow-actions {
+    text-align: right;
+}
+
+.yui-skin-ux div.addressbookimport-flow-actions button.msg_cat_class_cancel_link {
+	margin-right: 10px;
+}
+
+.yui-skin-ux #addressbookimport-thirdpartystatus-throbber {
+    text-align:center; 
+    padding: 1em;
+}
+
+.yui-skin-ux #addressbookimport-thirdpartystatus-events {
+    max-height: 200px;
+    overflow: auto;
+}
+
+.yui-skin-ux ul#addressbookimport_selectcontacts_options li input {
+    vertical-align: middle; 
+}
+
+.yui-skin-ux #addressbookimport-importcandidatecontacts-list-actions-top {
+    margin-bottom: .5em;
+}
+
+.yui-skin-ux #addressbookimport-importcandidatecontacts-list-actions-bottom {
+    margin-top: .5em;
+}
+
+.yui-skin-ux div#addressbookimport_importresults_section_summary_list_container {
+	background: #FFFFCD;
+    padding: 15px;
+    margin: 10px 0px 40px 0px;
+    border: 2px solid #FBDFA5;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+}
+
+.yui-skin-ux div#addressbookimport_importresults_section_summary_list_container ul li {
+    margin-top: 0.35em;
+    margin-bottom: 0.35em;
+}
+
+.yui-skin-ux div#addressbookimport_importresults_section_summary_list_container ul li.addressBookImportSummarySuccess {
+    list-style: disc inside url("../images/check.gif");
+}
+
+.yui-skin-ux div#addressbookimport_importresults_section_summary_list_container ul li.addressBookImportSummaryError {
+    list-style: disc inside url("../images/warning.png");
+}
+
+.yui-skin-ux span.addressbookimportImportresultsHeaderCount {
+    color: #9F9F9F;
+    padding-left: 1em;
+}
+
+.yui-skin-ux div#addressbookimport_selectsource_button_csv div.left {
+    float: left;
+}
+
+.yui-skin-ux div#addressbookimport_selectsource_button_csv div.right {
+    float: right;
+}
+
+.yui-skin-ux div#addressbookimport_csv_icon_container {
+    margin: 0.75em 0.5em;
+}
+
+.yui-skin-ux div#addressbookimport-csvmapping-preview-num-omitted-block {
+    float: right; 
+    margin-top: 0.5em; 
+    margin-bottom: 1em;
+} 
+
+.yui-skin-ux div#addressbookimport-csvmapping-preview-make-changes-block {
+    margin-bottom: 0.75em;
+    float: left;
+}
+
+.yui-skin-ux div#addressbookimport-csvmapping-preview-select-encoding-block {
+    margin-bottom: 0.75em;
+    float: right;
+}
+
+.yui-skin-ux .addressbookimport_csv_column_selector {
+    margin: 0.25em 0em;
+    display: none;
+}
+
+#cancelAddressBookImportFinishedLink {
+	margin: 0px 10px 15px 0px;
+}
+
+#confirmAddressBookImportFinishedButton {
+	margin: 0px 15px 15px 0px;
+}
+
+.yui-skin-ux div.dataTableActionButtonContainer {
+    text-align: center;
+}
+
+#newsfeed-container {
+    background-color: #FEF8E9;
+    border-color: #FBDFA5;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+#carousel-container {
+    display: none;
+}
+
+.newsitem-container {
+    float: left;
+}
+
+.newsitem-image-container {
+    height: 150px;
+    width: 200px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.newsitem-main-container {
+    width: 435px;
+}
+
+#newsitem-body-container {
+    height: 130px;
+    overflow: hidden;
+}
+
+#newsitem-allmessages-container{
+    text-align: center;
+}
+
+#newsitem-allmessages-container div{
+    display:inline-block;zoom:1;*display:inline;
+}
+
+.newsitem-new-image {
+    float: left;
+    margin-right: 5px;
+    padding: 3px 5px;
+    background-color: #5AAC46;
+    font-size: 12px;
+    color: #FFFFFF;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.newsitem-title {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 16px;
+    float:left;
+}
+
+.newsitem-date {
+    float:left;
+    color: #999999;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.newsitem-text {
+    clear: both;
+    height: 100px;
+    overflow: hidden;
+}
+
+.newsitem-text-full {
+    clear: both;
+}
+
+.yui-carousel-nav {
+    display: none;
+}
+
+#carousel-paginator {
+    padding: 5px 0;
+    padding-right: 10px;
+}
+
+#carousel-paginator .yui-pg-page {
+    padding: 3px 5px;
+    border: 1px solid #9FC4E2;
+    margin-right: 10px;
+    background-color: #FFFFFF;
+    font-size: 14px;
+    color: #4887C3
+}
+
+#carousel-paginator .yui-pg-page.new {
+    border-color: #0090FF;
+    background-color: #D7FCFD;
+}
+
+#carousel-paginator .yui-pg-current-page,
+#carousel-paginator .yui-pg-current-page.new {
+    background-color: #4887C3;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+#msg_cat_admin_newsfeed_view_all {
+    padding: 5px 0;
+}
+
+#msg_cat_admin_newsfeed_new_total_container {
+    padding: 5px;
+}
+
+#newsfeed-header-container {
+    margin-bottom: 10px;
+}
+
+#msg_cat_admin_newsfeed_bar_title {
+    display:inline-block;zoom:1;*display:inline;
+}
+
+#newsfeed .hd {
+    border: 2px solid #444;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+#newsfeed .newsfeed-header {
+    margin: 10px;
+}
+
+#newsfeed-popup-footer .right-container {
+    float: right;
+    margin-top: 1em;
+}
+
+#newsfeed .newsfeed-header-elem {
+    color: white;
+    float:left;
+    margin-right: 1em;
+}
+
+#newsfeed .bd {
+    background-color: #FFFFFF;
+    margin: 0;
+    height: 400px;
+    overflow: auto;
+}
+
+#newsfeed-single-container {
+    padding: 2em;
+}
+
+#newsfeed .newsitem-main-container {
+    width: 408px;
+}
+
+#newsfeed-all-header {
+    padding: 1em;
+}
+
+#newsfeed-all-header div {
+    margin-right: 10px;
+}
+
+#newsfeed-all-header-left-container {
+    float: left;
+}
+
+#newsfeed-all-header-left-container div {
+    float: left;
+}
+
+#newsfeed-all-header-right-container {
+    float: right;
+}
+
+.newsfeed-list-item-container {
+    border: 1px solid #BBBBBB;
+    margin-bottom: 2px;
+    padding: 10px;
+}
+
+#tooltip.pc2Tooltip {
+    text-align: left;
+    background-color: #FFFFFF;
+    opacity: 0.9;
+    border: 10px solid #D7FCFD;
+    text: #333333;
+    padding: 0.5em;
+    /* box shadow */
+    -webkit-box-shadow: 4px 4px 12px;
+    -moz-box-shadow: 4px 4px 12px;
+    box-shadow: 4px 4px 12px; 
+    /* border radius */
+    -moz-border-radius: 0px 24px 24px 24px;
+    border-radius: 0px 24px 24px 24px;
+    
+    /* Pre-IE9 override ... style the tooltip border differently for browsers that don't support box shadow & opacity. */
+    border: 2px solid #555555\9; /* For IE < version 9*/
+    background-color: #F5F5F5\9; /* For IE < version 9*/
+}
+
+#tooltip.pc2Tooltip.viewport-right {
+    -moz-border-radius: 24px 0px 24px 24px;
+    border-radius: 24px 0px 24px 24px;
+}
+
+#tooltip.pc2Tooltip.viewport-bottom {
+    -moz-border-radius: 24px 24px 24px 0px;
+    border-radius: 24px 24px 24px 0px;
+}
+
+#tooltip.pc2Tooltip.viewport-right.viewport-bottom {
+    -moz-border-radius: 24px 24px 0px 24px;
+    border-radius: 24px 24px 0px 24px;
+}
+
+
+#tooltip.pc2Tooltip ul li {
+    padding-left: 2em;
+    text-indent: -2em;
+}
+
+#tooltip.pc2Tooltip h3 {
+    color: #000000;
+    font-weight: bold;
+    font-size: 95%;
+    background-color: #FFFFCD;
+    border: 1px solid #fdd485;
+    padding: 0.3em 0.5em;
+    margin: 0em 0em 0.5em 0em;
+    /* border radius */
+    -moz-border-radius: 6px;
+    border-radius: 6px; 
+}
+
+#tooltip.pc2Tooltip p,
+#tooltip.pc2Tooltip p {
+    margin: 0.5em 0em;
+}
+
+#tooltip.pc2Tooltip ul li {
+    list-style: disc inside;
+}
+
+.yui-skin-ux .dupResolutionButton {
+    cursor: pointer;
+}
+
+.privacy-settings-radio-label {
+    font-size: 110%;    
+}
+
+.delete-image {
+    border : none;
+    margin-top: 3px;
+}
+
+.email-template {
+    padding: 1px;
+}
+
+.email-template-row {
+    padding: 3px;    
+    padding-left: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+}
+
+.email-template-row-selected {
+    padding: 3px;
+    padding-left: 10px;
+    background-color: #ffffcd;
+    border: 1px solid #fdd485;
+}
+.email-template #email-template-container {
+    width: 100%;
+    position: relative;
+}
+
+#email-template-container {
+  padding-top:.8em;
+}
+
+.email-template #email-template-radio-container {
+    width:35%;
+}
+
+#email-template-container h3 {
+  padding-left: 2.2em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+#email-template-list-container {
+    overflow:auto;
+    height:125px;
+}
+#send-to-block {
+  display: none;
+}
+
+/* UK address lookup */
+#postcode_addressLookupError {
+    display: inline!important;
+}
+
+#addl_gift_matching_addresses_section {
+    margin: 0;      
+}
+
+#progress-gift-aid-match-value {
+    margin-top: .4em;
+    font-size: 1.5em;
+    margin-bottom: .4em;
+    color: #7c8b99; 
+}
+
+.progress-amt-raised-nopad {
+    border-right-width: 0px !important;
+    padding-right: 0px !important;
+}
+
+/* Manage Team Membership */
+.team-search-input {
+    width: 50%;
+}
+
+.join-team-button {
+    width: 20%;
+    float: left;
+}
+
+.team-search-result-info {
+    width: 80%;
+}
+
+.radio-text {
+    width: 90%;
+}
+
+.company {
+    float: left;
+    width: 50%;
+}
+.captain {
+    float: left;
+    width: 50%;
+}
+
+.company-label {
+    font-style: italic;
+}
+
+.captain-label {
+    font-style: italic;
+}
+
+.team-name {
+    font-weight: bold;
+}
+
+.team-captain {
+    font-weight: bold;
+}
+
+.team-company {
+    font-weight: bold;
+}
+
+.team-search-result-info {
+    float: left;
+}
+
+.radio-button {
+    float: left;
+}
+
+.radio-text {
+    float: left;
+}
+
+#manage-membership-cancel-search {
+	margin-right: 10px;
+}
+
+#team-search-results-container {
+    margin: 1em 0;
+}
+
+#confirm-leave-team-container, 
+#manage-membership, 
+#join-team-container, 
+#confirm-join-team-container, 
+#leave-team-container, 
+#join-team-search-explanation, 
+#join-team-search-terms {
+    margin-top: 1em; margin-bottom: 1em;
+}
+
+.cancel-button {
+    margin-right: 10px;
+}
+.cancel-or-continue-container {
+    margin-bottom: 1em;
+    float: right;
+    display: block;
+}
+
+.team-search-input {
+    margin-bottom: 1em;
+}
+
+#join-team-confirmation-dialog > div, #leave-team-confirmation-dialog > div {
+    margin-top: 1em; margin-bottom: 1em;
+}
+
+#membership-content hr {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.team-search-result {
+    padding: 10px; 
+    margin: 3px; 
+    border: 1px solid #aaa; 
+    border-radius: 5px; 
+    background-color: #DFDFDF; 
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF), to(#DFDFDF));
+    background-image: -webkit-linear-gradient(top, #FFF, #DFDFDF); 
+    background-image:    -moz-linear-gradient(top, #FFF, #DFDFDF);
+    background-image:     -ms-linear-gradient(top, #FFF, #DFDFDF);
+    background-image:      -o-linear-gradient(top, #FFF, #DFDFDF);
+}
+
+.join-team-button-container {
+    padding: 5px;
+    margin: 15px; 
+    border: 1px solid #4887C3;
+    border-radius: 5px; 
+    text-align: center;
+    background: #4887C3;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.join-team-button-container:hover {
+	background: #3871A9;
+	border-color: #3871A9;
+}
+
+#email-wizard-template-header,
+#email-wizard-template-type-header {
+  display:none;
+}
+
+#email-wizard-preview-subject {
+    margin-bottom: 10px;
+}
+
+.email-wizard #email-wizard-template-header,
+.email-wizard #email-wizard-template-type-header {
+  display: block;
+}
+
+#email-wizard-template-header {
+  margin-top:1.2em;
+}
+
+.email-wizard #email-compose-top {
+  border: none;
+}
+
+.email-wizard #email-compose-salutation {
+  background: none;
+}
+
+.email-wizard .email-template-row {
+  border: none;
+}
+
+.email-wizard #email-compose-content-actions {
+  background: none;
+  text-align: right;
+}
+
+.email-wizard #preview-send-label,
+.email-wizard #msg_cat_compose_preview_or_label {
+  display:none;
+}
+
+.email-wizard #email-template-container label {
+  margin-left: 0.4em;
+}
+
+.email-wizard #send-info-table {
+  border: none;
+}
+
+.email-wizard-status-indicator,
+.addressbookimport-wizard-status-indicator {
+  font-size: 1.6em;
+  color: #fff;
+  margin-right: 3px;
+  line-height: 1em;
+  position: relative;
+  top: 3px;
+}
+
+.email-wizard-contact-picker {
+  display:inline-block;zoom:1;*display:inline;
+  margin: 5px 20px 0px 0px;
+  width: 305px;  
+}
+.email-wizard-contact-picker-header {
+  padding: 10px;
+}
+
+#email-wizard-contact-search {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  padding: 2px;
+  margin: 0 0 0 10px;
+  width: 14em;
+}
+
+div#email-wizard-contacts button {
+    margin-right: 15px;
+}
+
+#email-wizard-contacts-table, #email-wizard-contacts-table-header, #email-wizard-groups-table, #email-wizard-groups-table-header {
+  border: 0;
+  table-layout:fixed;
+  width:289px;
+}
+
+#email-wizard-contacts-table-header thead, #email-wizard-groups-table-header thead {
+  background-color: #ddd;
+}
+
+#email-wizard-contacts-table tbody,  #email-wizard-groups-table tbody {
+  display:block;
+  width:304px;
+}
+
+#email-wizard-contacts-table-header thead,  #email-wizard-groups-table-header thead {
+    display:block;
+    overflow: auto;
+    width:304px;
+}
+
+#email-wizard-contacts-table tbody, #email-wizard-groups-table tbody {
+  height:280px;
+}
+
+#email-wizard-contacts-table-header th, #email-wizard-contacts-table td, #email-wizard-groups-table-header th, #email-wizard-groups-table td {
+  padding: 10px;
+}
+
+#email-wizard-contacts-table tr, #email-wizard-groups-table tr, #email-wizard-contacts-table-header tr, #email-wizard-groups-table-header tr {
+  height: 1em;
+}
+
+#email-wizard-contacts-table td, #email-wizard-groups-table td, #email-wizard-contacts-table-header td, #email-wizard-groups-table-header td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display:inline-block;zoom:1;*display:inline;
+}
+
+#email-wizard-contacts-table tbody tr:nth-child(even), #email-wizard-groups-table tbody tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.email-wizard-contacts-checkbox-header, .email-wizard-groups-checkbox-header, .email-wizard-contacts-checkbox, .email-wizard-groups-checkbox {
+  width:13px;
+}
+
+.email-wizard-contacts-name-header, .email-wizard-contacts-name {
+  width:85px;
+}
+
+.email-wizard-contacts-email {
+  width: 145px;
+}
+
+#email-wizard-groups-table-container, #email-wizard-groups-table-header {
+  display: none;
+}
+
+.email-wizard-groups-name-header {
+  width: 275px;
+}
+
+.email-wizard-groups-name {
+  width: 236px;
+}
+
+#email-wizard-contacts-table-container, #email-wizard-groups-table-container {
+  height: 280px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#email-wizard-recipients-table tbody tr:nth-child(even)  {
+  background-color: #f0f0f0;
+}
+
+.email-wizard-recipients-container {
+  display:inline-block;zoom:1;*display:inline;
+  width: 305px;
+}
+
+#email-wizard-recipients-table, #email-wizard-recipients-table-header {
+  /*position: relative;
+  top: -2.3em;*/
+  table-layout:fixed;
+  width: 330px;
+  border: 0;
+}
+
+#email-wizard-recipients-table-header thead {
+  display:block;
+  overflow: auto;
+  width:328px;
+}
+
+#email-wizard-recipients-table tbody {
+  /*height:316px;*/
+}
+
+#email-wizard-recipients-table-header th, #email-wizard-recipients-table td {
+  padding: 10px;
+}
+
+#email-wizard-recipients-table tr, #email-wizard-recipients-table-header tr {
+    height: 1em;
+}
+
+#email-wizard-recipients-table td, #email-wizard-recipients-table-header td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display:inline-block;zoom:1;*display:inline;
+}
+
+#email-wizard-recipients-table .email-wizard-recipients-email  {
+    width: 115px;
+}
+
+#email-wizard-recipients-table-container {
+  height: 333px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  width: 326px;
+}
+
+.email-wizard-table-container {
+	border: 1px solid #ddd;
+}
+
+.email-wizard-table-container .email-wizard-contact-picker-header{
+    margin: 5px 5px 5px 5px;
+}
+
+.email-wizard-recipients-name-header, .email-wizard-recipients-name {
+  width:80px;
+}
+
+#email-wizard-recipients-table, #email-wizard-recipients-table-header .email-wizard-recipients-actions-header {
+  padding-left: 100px;
+  text-align: left;
+}
+
+.email-wizard-recipients-actions {
+  width:61px;
+  text-align: left;
+}
+
+#email-wizard-recipients-table .email-wizard-recipients-actions-button{
+    margin: 0px 2px 0px 8px;
+    font-weight: bold;
+}
+
+.email-wizard-recipients-actions .email-wizard-recipients-actions-button {
+  background:none;
+  border:none;
+  color: #3871A9;
+  cursor:hand;
+  cursor:pointer;
+  padding: 0px;
+}
+
+#email-wizard-edit-contact-dialog #contactedit-dialog-form fieldset:first-child{
+  margin-top: 20px;
+}
+
+#email-wizard-add-contact-dialog, #email-wizard-edit-contact-dialog {
+  display: none;
+  min-width:300px;
+}
+
+#email-wizard-add-contact-dialog label, #email-wizard-edit-contact-dialog label {
+  width:80px;
+  display:inline-block;zoom:1;*display:inline;
+}
+
+#email-wizard-add-contact-dialog input, #email-wizard-edit-contact-dialog input {
+  display:inline-block;zoom:1;*display:inline;
+  margin: 5px;
+}
+
+#email-wizard-edit-contact-dialog #contactedit-dialog-form input {
+    height: 25px;
+    width: 270px;
+}
+
+#email-content {
+  padding-bottom: 1.5em;
+}
+
+.email-wizard-recipients-header .loader {
+  display: none;
+}
+
+#bd-org-html ul {
+    margin: 1.12em 0 1.12em 40px;
+}
+
+#bd-org-html ul li {
+    list-style-type: disc;
+}
+
+#bd-org-html ol {
+    margin: 1.12em 0 1.12em 40px;
+}
+
+#bd-org-html ol li {
+    list-style-type: decimal;
+}
+
+#bd-org-html p {
+    padding: .5em 0 .5em 0;
+}
+
+#bd-org-html strong {
+    font-weight: bold;
+}
+
+.content-actions {
+    padding-top: 40px;
+}
+
+.sidebar-actions,
+.yui-skin-ux .yui-panel .ft {
+    padding-top: 20px;
+}
+
+.content-actions,
+.sidebar-actions,
+.yui-skin-ux .yui-panel .ft {
+    text-align: right;
+}
+
+.content-actions a,
+.content-actions button {
+    margin-left: 1.2em;
+}
+
+.sidebar-actions a,
+.sidebar-actions button,
+.yui-skin-ux .yui-panel .ft .yui-button.yui-push-button {
+    margin-left: 0.75em;
+}
+
+div#privacy-block {
+    margin-top: 1em;
+}
+
+#search-filters {
+    padding: .3em;
+    width: 25.2em;
+}
+
+.yui-skin-ux #sidebar .side-content.editable h3,
+.yui-skin-ux #sidebar .sidebar-form h3 {
+    padding: 0 0 5px 0;
+}
+
+dl#contact_details_list dt {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+dl#contact_details_list dd {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.yui-skin-ux #sidebar .side-content.editable h1,
+.yui-skin-ux #sidebar .sidebar-form h1 {
+    margin-bottom: 30px;
+    font-size: 1.4em;
+}
+
+.yui-skin-ux #sidebar .module {
+    padding: 15px 10px 15px 10px;
+
+}
+
+.yui-skin-ux #sidebar .module .title {
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.yui-skin-ux #sidebar .module .field {
+    font-size: 12px;
+    color: #333;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.yui-skin-ux #teampage-sidebar #new-team-name {
+    font-size: 12px;
+    color: #333;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.yui-skin-ux #teampage-sidebar #new-company-name {
+    font-size: 12px;
+    color: #333;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.yui-skin-ux #sidebar .sidebar-form .field {
+    margin-bottom: 20px;
+    display: block;
+}
+
+#email-compose-templates h3 {
+	margin-top: 20px;
+}
+
+#email-compose-templates {
+    margin-top: -20px;
+}
+
+.mceLayout {
+    width: 100% !important;
+    border: 1px solid #D4D4D4;
+}
+
+.yui-skin-ux div.actions #quick-gift-cancel {
+    margin: 10px;
+}
+
+.yui-skin-ux #quick-gift-cancel #msg_cat_gift_cancel_label{
+    font-weight: normal;
+}
+
+.yui-skin-ux div.actions #quick-gift-submit {
+    margin: 10px 10px 10px 0px;
+}
+
+.yui-skin-ux #page-form p.form-field{
+    margin: 15px 0px 0px;
+}
+
+.yui-skin-ux #page-form p.form-field .width-label{
+    width: 7em;
+}
+
+.yui-skin-ux #page-form .radio-section{
+    margin-left: -37px;
+}
+
+.yui-skin-ux #payment-radio-choices .table-padding {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.yui-skin-ux #msg_cat_gift_label {
+    margin-left: 15px;
+}
+
+div#email-contacts-content div#contacts-content-header,
+div#contactdetails-content-header {
+	margin: 0px 0px 30px 0px;
+}
+
+div#email-contacts-content div#contacts-actions a,
+div#email-contacts-content div#contacts-actions button {
+	font-size: 11px;
+}
+
+div#email-contacts-content span#groups_menu_container {
+	border: 0px;
+}
+
+div#email-contacts-content div#contacts-actions a#msg_cat_contacts_send_message_button {
+	border: 0px;
+}
+
+div#email-contacts-content span#groups_menu_container button#groupsMenuButton-button,
+span#detailsGroupsMenuButton button#detailsGroupsMenuButton-button {
+	background: none;
+	border: none;
+	padding: 0px;
+	cursor: pointer;
+	color: #1441B3;
+}
+
+div#email-contacts-content div#contacts-actions a#msg_cat_contacts_delete_button {
+	border: 0px;
+}
+
+div#email-contacts-content div.search{
+	margin: 0px 0px 10px 0px;
+}
+
+div#email-contacts-content div.search label#msg_cat_search_contacts_text {
+	display: block;
+}
+
+div#email-contacts-content div.search input#contacts-search-text {
+	width: 250px;
+	height: 22px;
+}
+
+div#sidebar #email-sidebar div#address_book_add {
+	padding: 15px 10px 15px 10px;
+	margin: 0px;
+}
+div#sidebar div#address_book_add h3#msg_cat_contacts_sidebar_add_contact_header {
+	font-weight: bold;
+	padding-bottom: 15px;
+	color: #666666
+}
+
+div#sidebar div#address_book_add div#add-contact-button-container {
+	margin-top: 10px;
+}
+
+div#sidebar div#address_book_add #msg_cat_add_contacts_cancel_link {
+	float: right;
+	margin-right: 10px;
+}
+
+div#sidebar div#address_book_add #msg_cat_add_contact_submit_button {
+	float: right;
+}
+
+#count_selected_block, #count_groups_selected_block {
+    display: none;
+}
+
+#teampage-content #teampage_permalink_save_cancel,
+#personalpage-content #permalink_save_cancel,
+#companypage_permalink_save_cancel {
+    text-align: right;
+}
+
+#teampage-content #teampage_permalink_save_cancel button,
+#personalpage-content #permalink_save_cancel button,
+#companypage_permalink_save_cancel button {
+    margin-right: 5px;
+}
+
+div#keepAlive a.container-close {
+    display: none;
+}
+
+#gift-add-content #gift-add-content-form #addl_gift_options label{
+    width: 7em;
+}
+
+#report-personal-sidebar div#add-quick-gift-block {
+    margin: 10px 0 30px;
+}
+
+div#email-contactdetails-sidebar {
+    margin-top: 15px;
+}
+
+div#progress-contactdetails-goal-value {
+    min-height: 32px;
+}
+
+span.question-number {
+    margin-left: -1em;
+}
+
+.question-container div {
+    padding: 0.2em 0;
+}
+
+/*****************************
+ * What Next Section Styles
+ *****************************/
+
+    #bd-what-next {
+        clear: both;
+        display: none;
+    }
+
+    #bd-what-next .what-next-answer-item {
+        cursor: pointer;
+        border: 1px dashed #D7D7D7;
+        border-radius: 4px;
+        padding: 1.33em;
+        margin: 0.42em 0;
+    }
+
+    #bd-what-next .what-next-answer-item.what-next-completed {
+        border: 1px solid #D7D7D7;
+    }
+
+    #bd-what-next .what-next-answer-item div {
+        margin: 0;
+    }
+
+    #bd-what-next .what-next-icon {
+      display:inline-block;zoom:1;*display:inline;
+      padding-right: 10px;
+      font-size: 3em;
+      color: #1141B3;
+    }
+
+    #bd-what-next .what-next-message-container {
+      display:inline-block;zoom:1;*display:inline;
+      width: 555px;
+    }
+
+    #bd-what-next .what-next-type {
+      font-size: 14px;
+      color: #1141B3;
+    }
+
+
+
+
+/*************************
+ *  Import Address Book
+ *************************/
+
+    div#addressbookimport-content a:link {
+        font-size: 11px;
+    }
+
+    div#addressbookimport-content h2 {
+        font-weight: bold;
+    }
+
+    div#addressbookimport-content h2#msg_cat_addressbookimport_selectsource_title,
+    div#addressbookimport-content h2#msg_cat_addressbookimport_csvmapping_title,
+    div#addressbookimport-content h2#msg_cat_addressbookimport_importresults_title {
+        margin: 0px;
+        float: left;
+    }
+
+    div#addressbookimport-selectsource-content,
+    div#addressbookimport-csvmapping-content,
+    div#addressbookimport-thirdpartystatus-content,
+    div#addressbookimport-selectcontacts-content,
+    div#addressbookimport-importresults-content {
+        padding: 0px;
+    }
+
+    div#addressbookimport-selectsource-content div.page-setting-action,
+    div#addressbookimport-csvmapping-content div.page-setting-action,
+    div#addressbookimport-importresults-content div.page-setting-action {
+        margin: 3px 0px 10px 10px;
+        float: left;
+    }
+
+    div#addressbookimport-selectsource-content .big-button {
+        margin-left: 0px;
+    }
+
+    div#addressbookimport-thirdpartystatus-content div.addressbookimport-thirdpartystatus-events-container {
+        background: #FFFFCD;
+        padding: 15px;
+        margin: 10px 0px 40px 0px;
+        border: 2px solid #FBDFA5;
+        -moz-border-radius: 1em;
+        -webkit-border-radius: 1em;
+        border-radius: 1em;
+    }
+
+    div#addressbookimport-thirdpartystatus-content div#addressbookimport-thirdpartystatus-events div {
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    div#addressbookimport-thirdpartystatus-content div#addressbookimport-thirdpartystatus-events div:nth-child(4) {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+
+    div#addressbookimport-selectcontacts-content div.addressbookimport-selectcontacts-options-container {
+        margin: 20px;
+    }
+
+    div#addressbookimport-importcandidatecontacts-list-container {
+        margin-left: -20px;
+    }
+
+    li#addressbookimport_importresults_section_summary_success_li a:link,
+    li#addressbookimport_importresults_section_summary_success_li span,
+    li#addressbookimport_importresults_section_summary_suspected_duplicate_li a:link,
+    li#addressbookimport_importresults_section_summary_suspected_duplicate_li span,
+    li#addressbookimport_importresults_section_summary_error_li a:link,
+    li#addressbookimport_importresults_section_summary_error_li span {
+        font-size: 16px;
+    }
+
+    h3#addressbookimport_importresults_section_added_header,
+    h3#addressbookimport_importresults_section_suspected_duplicates_header,
+    h3#addressbookimport_importresults_section_errors_header {
+        margin-top: 10px;
+    }
+
+    div#addressbookimport-importresults-accordion h3.ui-accordion-header span#msg_cat_addressbookimport_importresults_section_added_header,
+    div#addressbookimport-importresults-accordion h3.ui-accordion-header span#msg_cat_addressbookimport_importresults_section_suspected_duplicates_header,
+    div#addressbookimport-importresults-accordion h3.ui-accordion-header span#msg_cat_addressbookimport_importresults_section_errors_header {
+        color: #FFFFFF;
+    }
+
+    div#addressbookimport-importresults-newly-added-list,
+    div#addressbookimport-importresults-suspected-duplicates-list,
+    div#addressbookimport-importresults-errors-list {
+        margin-top: 20px;
+    }
+
+    div#addressbookimport-importresults-accordion {
+        margin-bottom: 40px;
+    }
+
+
+
+/********************
+ * Progress Tracker
+ ********************/
+
+    .track-progress {
+
+        margin: 0 0 30px 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .track-progress li {
+        list-style-type: none;
+        display:inline-block;zoom:1;*display:inline;
+
+        position: relative;
+        margin: 2px 0;
+        padding: 0;
+
+        text-align: center;
+        line-height: 40px;
+        height: 40px;
+
+        background-color: #9FC4E2;
+        cursor: pointer;
+    }
+
+    .track-progress li > span {
+        display: block;
+        color: #fff;
+        font-size: 16px;
+        padding: 0 5px 0 35px;
+    }
+
+    .track-progress li:first-child > span {
+        padding-left: 10px;
+    }
+
+    .track-progress li:last-child > span {
+        padding-right: 25px;
+    }
+
+    .track-progress li.email-wizard-nav-selected > span,
+    .track-progress li.addressbookimport-wizard-nav-selected > span,
+    .track-progress li.email-wizard-nav-selected:hover > span,
+    .track-progress li.email-wizard-nav-unselected:hover > span {
+        color: #fff;
+        background-color: #4887C3;
+    }
+
+    .track-progress li > span:after,
+    .track-progress li > span:before {
+        content: "";
+        display: block;
+        width: 0px;
+        height: 0px;
+
+        position: absolute;
+        left: 0;
+
+        border: solid transparent;
+        text-align: right;
+    }
+
+    .track-progress li > span:after {
+        top: -2px;
+        z-index: 1;
+        border-left-color: #fff;
+        border-width: 22px;
+    }
+
+    .track-progress li > span:before  {
+        top: 0;
+        z-index: 2;
+        border-left-color: #9FC4E2;
+        border-width: 20px;
+    }
+
+    .track-progress li > span:before {
+        z-index: 2;
+    }
+
+    .track-progress li.email-wizard-nav-selected + li > span:before,
+    .track-progress li.addressbookimport-wizard-nav-selected + li > span:before,
+    .track-progress li.email-wizard-nav-selected:hover + li > span:before,
+    .track-progress li.email-wizard-nav-unselected:hover + li > span:before {
+        border-left-color: #4887C3;
+    }
+
+    .track-progress li:first-child > span:after,
+    .track-progress li:first-child > span:before {
+        display: none;
+    }
+
+    .track-progress li:last-child i {
+        display: block;
+        height: 0;
+        width: 0;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        border: solid transparent;
+        border-left-color: #fff;
+        border-width: 20px;
+    }
+
+    .track-progress li:last-child i {
+        left: auto;
+        right: -20px;
+
+        border-left-color: transparent;
+        border-top-color: #fff;
+        border-bottom-color: #fff;
+    }
+
+    .track-progress li.addressbookimport-wizard-nav-selected,
+    .track-progress li.addressbookimport-wizard-nav-unselected {
+    	cursor: default;
+    }
+
+
+    .ie8 .track-progress li > span:after,
+    .ie8 .track-progress li > span:before  {
+        top: 0;
+        border: 0;
+    }
+
+    .ie8 .track-progress li {
+        margin: 0;
+    }
+
+    .ie8 .track-progress li > span {
+        padding: 0 20px 0 15px;
+    }
+
+/******************
+ * jQuery Dialog
+ ******************/
+
+    .ui-dialog .ui-dialog-titlebar {
+        padding: 10px 10px 10px;
+        border: 0px;
+        border-radius: 0px;
+    }
+
+    .yui-dialog .bd label {
+        margin-right: 10px;
+    }
+
+    .yui-dialog .bd form input[type=textbox] {
+        height: 25px;
+        width: 200px;
+    }
+
+    .ui-dialog #email-wizard-add-contact-dialog fieldset {
+        margin: 20px 10px 20px 15px;
+        padding: 0px;
+    }
+
+    .ui-dialog #email-wizard-add-contact-dialog input {
+        width: 250px;
+        height: 25px;
+    }
+
+    .ui-dialog #email-wizard-add-contact-dialog ~input{
+        margin-top: 15px;
+    }
+
+    .ui-dialog #email-wizard-edit-contact-dialog fieldset{
+        margin: 0px 10px 20px 0px;
+    }
+
+    .ui-dialog{
+        padding: 0 !important;
+        border: solid;
+        border-color: #444444;
+        border-width: thin;
+    }
+
+    .ui-dialog .ui-dialog-titlebar-close {
+     display: none
+    }
+
+    .ui-dialog #email-wizard-edit-contact-dialog #contactedit-dialog-form{
+     padding: 0px;
+    }
+
+    .ui-dialog #email-wizard-edit-contact-dialog #contactedit-dialog-form label{
+     float: none;
+    }
+
+    .ui-dialog .ui-dialog-buttonpane .ui-button {
+        margin-right: 10px;
+    }
+
+    .ux-block2 .page-form .content-actions{
+       text-align: justify;
+       margin-left: 65px;
+    }
+
+    #email-contactedit-content .ux-block2 #contactedit-page-form p{
+       margin-bottom: 5px;
+    }
+
+    #contacts-table-info-block #group-list-content-block .yui-dt-rec .underline {
+     width: 100px !important;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+    }
+
+    #contacts-table-info-block #group-list-content-block #contacts-list-groups .yui-dt-data tr{
+         background: transparent;
+    }
+
+    #contacts-table-info-block #group-list-content-block #contacts-list-groups tbody .yui-dt-liner{
+        height: 25px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+/******************
+ * Social Sharing
+ ******************/
+    div.social-button-wrapper {
+        float: right;
+    }
+
+    div#shareFacebookDialog .ft .yui-button button,
+    div#shareYahooDialog .ft .yui-button button,
+    div#shareMySpaceDialog .ft .yui-button button,
+    div#shareTwitterDialog .ft .yui-button button,
+    div#shareLinkedInDialog .ft .yui-button button {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    div#shareFacebookDialog .ft .yui-button,
+	div#shareYahooDialog .ft .yui-button,
+    div#shareMySpaceDialog .ft .yui-button,
+    div#shareTwitterDialog .ft .yui-button,
+    div#shareLinkedInDialog .ft .yui-button {
+        background: #5AAC46;
+        border-color: #5AAC46;
+    }
+
+    div#shareFacebookDialog .ft .yui-button:hover,
+    div#shareYahooDialog .ft .yui-button:hover,
+    div#shareMySpaceDialog .ft .yui-button:hover,
+    div#shareTwitterDialog .ft .yui-button:hover,
+    div#shareLinkedInDialog .ft .yui-button:hover {
+	    background: #4A8E39;
+        border-color: #4A8E39;
+	}
+
+	#manage-display-name-title {
+		font-weight: bold;
+	}
+
+	#editPrivacySettings li {
+		margin-bottom: 10px;
+	}
+
+	#editPrivacySettings li input#screennameField {
+		margin-top: 5px;
+	}

@@ -1,0 +1,5 @@
+/* IE only css */
+
+.todoHeader,#footerLeft, #footerRight {padding:0;}
+#individualbox, #famfriend, #corpteam, #cluborg{display:inline-block;zoom:1;*display:inline;width:200px;}
+#captainsMessage{min-width:125px !important;}
