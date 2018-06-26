@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!--
+	This HTML file demonstrates the intended use of PC2 CSS styles.
+	
+	If you're new to PC2, this document will help you to understand the 
+	basic UI architecture of the application.
+	 
+	If you're refactoring PC2 styles, you might consider checking how this 
+	document renders when you're done.   
+ -->
+
+<head>
+    <title>Participant Center Styles</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    
+    <link rel="stylesheet" type="text/css" href="css/skins/ux/yui-skin-ux.css" />
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+    
+    <!--YUI --> 
+    <script type="text/javascript" src="../yui/yuiloader/yuiloader-min.js"></script>
+	<script type="text/javascript" src="../yui3/yui/yui-min.js"></script>
+	<script type="text/javascript" src="js/modules.js"></script>
+	<script type="text/javascript"> 
+		var Y = YUI({
+			base: '../yui3/',
+            debug: false,
+			modules: getModules('../', 'convio', true)
+		});
+		
+	    Y.use(
+	        "yui2-reset-fonts-grids",
+	        function(Y) {
+	                 // nothing to do .... just bringing in YUI styles
+	        }
+	    );
+
+	    Y.use("jquery-tooltip", function(Y) {
+		    jQuery(function() {
+		    	jQuery('#tooltipExample').tooltip({ extraClass: "pc2Tooltip" });
+		    	jQuery('#tooltipCustomContentExample').tooltip({
+		    		extraClass: "pc2Tooltip",
+            	    showURL: false,
+		    		bodyHandler: function() { return "<h3>Morbi sit amet augue lectus.</h3><p>Donec posuere pellentesque ornare. Duis scelerisque, lectus sit amet viverra tristique.</p><ul><li>Aliquam accumsan accumsan lorem, in fringilla enim consequat vitae.</li><li>Cras interdum purus a est pellentesque at lacinia ligula tincidunt.<br/>Sed scelerisque justo ac lorem lobortis eu cursus ligula pellentesque.</li></ul>" }
+			    });
+			}); 
+		});
+
+	    Y.use("pc2-data-table-builder", function(Y) {
+
+	    	var columns = [ 
+				{key:"field1", width:190}, 
+	            {key:"field2", width:190},
+
+	            {
+					label: 'fields', 
+					children:
+					[
+	             
+			            {key:"field3", width:30}, 
+			            {key:"field4", width:30},
+			            {key:"field5", width:30}
+
+			        ]
+				}
+	        ]; 
+
+	    	var data = [];
+			for (var i = 0; i < 10; i++) {
+				data.push({ field1: "foo foo foo foo foo", field2: "bar bar bar bar bar", field3: "blah", field4: "blah", field5: "blah" });
+			}
+	    	
+	        var dataSource = new YAHOO.util.LocalDataSource(data);
+			dataSource.responseType = YAHOO.util.XHRDataSource.TYPE_JSARRAY;
+	    	
+	    	YAHOO.Convio.PC2.Component.DataTableBuilder.buildDataTable(
+					"tinyScrollTable",
+					columns, 
+					dataSource,
+	                {
+						height: "6em",
+						width: '24em'
+		            },
+	                null,
+	                true
+	        );
+	    	
+	    	YAHOO.Convio.PC2.Component.DataTableBuilder.buildDataTable(
+					"scrollTable",
+					columns, 
+					dataSource,
+	                {
+						height: "12em"
+		            },
+	                null,
+	                true
+	        );
+
+	    	YAHOO.Convio.PC2.Component.DataTableBuilder.buildDataTable(
+					"regularTable",
+					columns, 
+					dataSource,
+	                {},
+	                null,
+	                false
+	        );
+
+	    	
+		    
+	    });
+	    
+		
+		
+	    	    
+    </script>
+    
+</head>
+<body class="yui-skin-ux">
+
+<div id="doc2" class="yui-t5">
+    <div class="ux-main">
+    
+    	<!-- Navigation Header -->
+        <div id="hd">
+            <div class="ux-hd-row ux-hd-small">
+            	<div id="hd-small-left">
+	                <span>Quisque,</span> 
+	                <span id="hd-user-name">Maecenas</span>
+	                <span class="ux-pipe-divider">|</span> 
+	                <span class="ux-link"><a target="_blank" href="#">Suspendisse</a></span>
+	            </div>
+	            <div id="hd-small-right"> 
+	                <span>Donec dapibus</span>
+	            </div>
+            </div>
+            <div class="ux-hd-row">
+	            <ul id="hd-nav" class="clearfix">
+	                <li class="selected"><a href="#">Lorem</a></li>
+	                <li><a href="#">Mauris</a></li>
+	                <li><a href="#">Phasellus</a></li>
+	                <li><a href="#">Aliquam</a></li>
+	            </ul>
+	            <div id="hd-etc" class="ux-hd-small">
+	            	<span class="ux-link"><a href="#">Cras</a></span>
+	            	<span class="ux-pipe-divider"> | </span>
+	            	<span class="ux-link"><a href="#">Quisque</a></span>
+	            	<span class="ux-pipe-divider"> | </span>
+	            	<span class="ux-link"><a href="#">Maecenas</a></span>
+	            </div>
+	        </div>
+            <div id="hd-nav-base" class="ux-hd-row"></div>
+        </div>
+        
+        <!-- Page Body -->
+        <div id="bd">
+            
+            <!-- Main Content -->
+            <div id="yui-main">
+                <div id="content" class="yui-b">
+                
+                    <div class="yui-g">
+                    
+                    	<!-- A typical content header -->
+                        <h1>Praesent</h1>
+                        
+                        <div class="ux-block2 clearfix bd-progress" id="someTypeOf-progress">
+                            <h3>Donec Nullam Proin</h3>
+                            
+                            <div class="fundraising-progress">
+                                <div class="section progress-amt-raised">
+                                    <div class="big-block">$300.50</div>
+                                    <div class="tiny-block">Sed lacerat consequat</div>
+                                </div>
+                                <div class="section progress-goal">
+                                    <div class="big-block">$900.00</div>
+                                    <div class="tiny-block">
+                                    	<span>Maecenas vel</span> 
+                                    	<span>(<a href="#">Integer eget</a>)</span>
+                                    </div>
+                                </div>
+                                <div class="section progress-percent">
+                                    <div class="big-block">60%</div>
+                                    <div class="tiny-block">Duis eget</div>
+                                </div>
+                                <div  class="section last progress-days-left">
+                                    <div class="big-block">157</div>
+                                    <div class="tiny-block">Quisque sit</div>
+                                </div>
+                            </div><!-- fundraising-progress -->
+                            
+                        </div><!-- someTypeOf-progress -->
+                        
+                        <!-- Another type of header that contains more complex content -->
+                        <div class="h1-imposter">
+                            <span>Etiam Hendrerit</span>
+                            <a href="#">Sed Porttitor Elit</a>
+                        </div>
+                        
+                        <div id="someTypeOf-page-content" class="ux-block">
+                        
+                        	<div id="someTypeOf-page-action-status">
+                                  <p id="some-action-success" class="success-message">
+                                  	Aenean in ipsum vel metus fermentum elementum.
+                                  </p>
+                                  <p id="some-other-action-failure" class="failure-message">
+                                  	Vestibulum faucibus congue metus, sit amet vestibulum nunc lacinia quis.
+                                  </p>
+							</div>
+							
+							<div id="someTypeOf-page-detail" class="page-setting">
+                               	<div class="page-setting-detail">
+									<span>Morbi id ipsum:</span>&nbsp;
+									<span>Nulla metus augue, pretium eget facilisis eget, eleifend et justo. Nullam a elit eros. Cras vel quam in turpis ultricies feugiat vel at erat.</span>
+                            	</div>
+                            	<div class="page-setting-action">
+                            		<a href="#">Etiam</a>
+                            	</div>
+                            	<div class="page-setting-footer"><!-- clears float used by page-setting-detail & page-setting-action --></div>
+							</div>
+							
+							<div id="someOtherTypeOf-page-detail" class="page-setting">
+                               	<div class="page-setting-detail">
+									<span>Ultrices ultricies magna sit amet ullamcorper. Nulla nibh tortor, pellentesque a lobortis ac, consequat eget tellus.</span>
+                            	</div>
+                            	<div class="page-setting-action"><!-- no action in this row, just leave the div empty --></div>
+                            	<div class="page-setting-footer"><!-- clears float used by page-setting-detail & page-setting-action --></div>
+							</div>
+                        
+                        </div><!-- someTypeOf-page-content -->
+                        
+                        <!-- A typical content header -->
+	                    <h1>Fringilla eget tempor</h1>
+						
+						<div id="yetAnotherTypeOf-page-content" class="ux-block">
+						
+							<!-- Example of custom tooltip -->
+							<p>Duis commodo lorem pulvinar magna blandit a <a id="tooltipExample" href="http://www.convio.com" title="congue eu convallis id">volutpat libero</a> et <a id="tooltipCustomContentExample" href="http://www.convio.com">rutrum</a>.</p>
+						
+							<!-- primary action buttons need not appear only in the side bar -->
+                           	<div class="primary-action clearfix">
+							    <div><span><a href="#" class="add">Proin sit amet</a></span></div>
+							</div>
+							
+							<!-- examples of "big" button styles -->
+							<div id="big-button-on" class="big-button big-button-on">
+								<p>Morbi erat tellus</p>
+							</div>
+							<div id="big-button-off-1" class="big-button big-button-off">
+								<p>Nunc porttitor sagittis condimentum</p>
+								<p>Nam in bibendum massa.</p>
+							</div>
+							<div id="big-button-off-2" class="big-button big-button-off">
+								<label>
+                   					<span>Donec mattis massa</span>
+                   					<br/>
+                   					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                   				</label>
+							</div>
+							<div id="big-button-off-3" class="big-button big-button-off"> 
+								<div>
+									<div style="float: left;">
+										<br/>
+										<input type="radio" value="foo" name="big-button-radio" id="big-button-off-3-foo" />
+									</div>
+									<div style="float: left; width: 85%;">
+										<label for="big-button-off-3-foo">
+		                   					<img height="20" src="http://upload.wikimedia.org/math/c/d/4/cd49bbc188dce0f93fef57312af5a106.png"></img>
+		                   					<img height="20" src="http://upload.wikimedia.org/math/c/d/4/cd49bbc188dce0f93fef57312af5a106.png"></img>
+		                   					<img height="20" src="http://upload.wikimedia.org/math/c/d/4/cd49bbc188dce0f93fef57312af5a106.png"></img>
+		                   					<img height="20" src="http://upload.wikimedia.org/math/c/d/4/cd49bbc188dce0f93fef57312af5a106.png"></img>
+		                   					<br/>
+		                   					<span>Suspendisse eget purus.  Cras vel quam in turpis ultricies feugiat vel at erat.</span> 
+		                   				</label>
+									</div>
+									<br style="clear: both" />
+								</div>
+								<div class="indented">
+									<br/>
+									<form action="">
+										<input size="12" type="file" />
+									</form>
+								</div>
+							</div>
+							
+						</div><!-- yetAnotherTypeOf-page-content -->
+						
+						<!-- A typical content header -->
+	                    <h1>Cras quis tempus nisi</h1>
+						
+						<div id="datatable-page-content" class="ux-block">
+						
+							<div class="indented">
+							
+								<h3>Nunc vel orci eu sem auctor faucibus nec eu nulla.</h3>
+								<div id="tinyScrollTable" class="even-odd"></div>
+							
+								<br/><br/>
+							
+								<h3>Sed vel nisl non nibh luctus tincidunt eget quis ligula.</h3>
+								<div id="scrollTable" class="even-odd"></div>
+								
+								<br/><br/>
+								
+								<h3>Curabitur fringilla tempus tortor aliquet volutpat.</h3>
+								<div id="regularTable" class="even-odd"></div>
+								
+							</div>
+						
+						</div><!-- "datatable-page-content" -->
+                        
+					</div><!-- yui-g -->
+                        
+                </div><!-- content -->
+            </div><!-- yui-main -->
+            
+            <div id="sidebar" class="yui-b">
+            
+				<div id="some-sidebar">
+				
+					<ul id="some_subnav" class="subnav" >
+						<li class="selected"><a href="#">Curabitur semper</a></li>
+						<li><a href="#">Aenean mauris</a></li>
+					</ul>
+					
+					<ol id="some_other_subnav" class="subnav">
+	                        <li class="wizard-previous">
+	                        	<a href="#">Duis felis</a>
+							</li>
+							<li class="wizard-previous">
+	                        	<a href="#">Cras facilisis</a>
+							</li>
+							<li class=" wizard-next selected">
+	                        	<span>Cras ultrices</span>
+							</li>
+							<li class=" wizard-next">
+	                        	<span>Donec pharetra</span>
+							</li>
+							<li class=" wizard-next">
+	                        	<span>Vivamus ante</span>
+							</li>
+	                    </ol>
+				
+					<div class="ux-block" id="someLogicalContainerName">
+					
+						<div class="primary-action-shrinkwrap-container">
+							<div class="primary-action clearfix">
+							    <div><span><a class="money" href="#">Pellentesque eu tellus</a></span></div>
+							</div>
+						
+							<div class="primary-action clearfix">
+							    <div><span><a class="message" href="#">Duis eget urna</a></span></div>
+							</div>
+						</div>	
+					
+						<ul class="side-links side-content clear">
+						    <li><a href="#"><span class="verb">Do</span> <span class="noun">Related Action</span></a></li>
+						    <li><a href="#"><span class="verb">Do</span> <span class="noun">Something Else</span></a></li>
+						</ul>    
+						
+						<div class="primary-action-shrinkwrap-container">
+							<div class="primary-action clearfix">
+							    <div><span><a class="add" href="#">Donec in lacus ipsum</a></span></div>
+							</div>
+						</div>	
+						
+						<div class="module sidebar-form">
+                            <p class="failure-message">Phasellus quis consectetur purus.</p>
+                            <form method="post" action="">
+                                <div class="bd">
+			                        <div class="label-field-wrap">
+			                            <label for="condimentum">Condimentum:</label>
+			                            <input type="text" id="condimentum" name="condimentum" />
+			                        </div>
+			                        <div class="label-field-wrap">
+			                            <label for="tempus">Tempus:</label>
+			                            <input type="text" id="tempus" name="tempus" />
+			                        </div>
+								</div>
+								<div>
+	                                <button type="button">Duis Semper</button>
+	                                <span id="msg_cat_team_edit_or_label">sub</span>
+	                                <a class="msg_cat_class_cancel" href="#">Fermentum</a>
+								</div>
+                            </form>
+                        </div>
+						
+						<div id="someTypeOfMessage" class="ux-block side-content">
+							<h3>Morbi Lobortis Tempor</h3>
+							<div>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas fringilla enim tristique convallis. Nam ullamcorper, velit id vehicula porttitor, elit sem blandit velit, et euismod odio magna vitae libero. Fusce eleifend dolor at purus tempus feugiat. In hac habitasse platea dictumst. Suspendisse aliquet malesuada nunc a elementum.
+							</div>
+						</div>
+						          
+					</div><!-- "someLogicalContainerName" -->
+					
+				</div><!-- some-sidebar -->	 
+				           
+            </div><!-- sidebar -->
+        
+		</div><!-- bd -->
+	</div><!-- ux-main -->
+	
+</div><!-- doc2 -->
+       
+</body>
+</html>

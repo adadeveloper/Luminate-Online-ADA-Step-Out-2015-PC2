@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>iFrame for YUI Javascript Tests</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+    <script type="text/javascript" src="../yui/yuiloader/yuiloader-min.js"></script>
+    <script type="text/javascript" src="js/convio_config.js"></script>
+    <script type="text/javascript" src="js/convio_utils.js"></script>
+    
+    <script type="text/javascript">
+
+        window.self.isIFrameDetected = function() {
+            return YAHOO.Convio.PC2.Utils.isIFrameDetected();
+        };
+
+        window.self.resizeFrameForCurrentView = function() {
+            return YAHOO.Convio.PC2.Utils.resizeFrameForCurrentView();
+        };
+        
+    </script>
+    
+</head>
+
+<body>
+	This is an iFrame used for unit testing.
+</body>
+
+</html>

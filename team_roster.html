@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Team Roster</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    
+    <link rel="stylesheet" type="text/css" href="css/skins/ux/yui-skin-ux.css" />
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="css/custom_ie.css" />
+    <![endif]-->
+
+    <script type="text/javascript" src="../yui/yuiloader/yuiloader-min.js"></script>
+    <!-- dynamic dependency loading -->
+    <script type="text/javascript" src="../yui3/yui/yui-min.js"></script>
+    <script type="text/javascript" src="js/modules.js"></script>
+    <script type="text/javascript"> 
+        var Y = YUI({
+            base: '../yui3/',
+            debug: false,
+            modules: getModules('../', 'convio', true)
+        });
+    </script> 
+    
+    <!-- Core -->
+    <script type="text/javascript" src="js/convio_config.js"></script>
+    <script type="text/javascript" src="js/convio_utils.js"></script>
+    <!-- Content -->
+    <script type="text/javascript" src="js/content_rest.js"></script>
+    <script type="text/javascript" src="js/content_utils.js"></script>
+    <!-- Teamraiser -->
+    <script type="text/javascript" src="js/teamraiser_rest.js"></script>
+    <script type="text/javascript" src="js/teamraiser_utils.js"></script>
+    <!-- Team Roster -->
+    <script type="text/javascript" src="js/team_roster.js"></script>
+    <!-- Custom -->
+    <script type="text/javascript" src="js/custom.js"></script>
+    
+    <!--Use YUI Loader to bring in your other dependencies: --> 
+    <script type="text/javascript"> 
+    Y.use(
+       	/* first, use only those dependencies needed to render "loading" window */    
+       	'pc2-loading-container-dependencies',
+           function(Y) {
+
+       		// display the "loading" window
+      			YAHOO.Convio.PC2.Utils.showLoadingContainer();
+
+   	   	    Y.use(
+   	   	    	/* next, use additional dependencies needed by the initial view of the PC2 application */
+   	   	    	'pc2-initial-page-view-dependencies',
+   	   	  		/* TODO DSW Olympus Refactor so that loading of this library is further delayed. */ "yui2-datatable",
+   	   	  		/* TODO DSW Olympus Refactor so that loading of this library is further delayed. */ "yui2-paginator",
+   		        function(Y) {
+  	   	    		
+   	                // Set the log out timer.
+   	                resetTimeout();
+   	                // Configure a logger
+   	                addLogger();
+   	                
+   	                YAHOO.Convio.PC2.Utils.loadPage();
+   	                
+   	                loadCustom();	
+   			    	    
+   		        }
+   	 	    );
+       	}
+    );
+    </script>
+</head>
+<body class="yui-skin-ux">
+
+<iframe id="yui-history-iframe" src="blank.html"></iframe>
+<input id="yui-history-field" type="hidden" />
+
+    <div class="yui-t2">
+        <div>
+            <br>
+            <h1 id="msg_cat_team_roster_heading"><!--Team Roster--></h1>
+            <br>
+            <a href="javascript: closeWin();" id="msg_cat_team_roster_close"><!--Close Window--></a>
+            <br>
+            <br>
+            <div id="team-roster-block">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

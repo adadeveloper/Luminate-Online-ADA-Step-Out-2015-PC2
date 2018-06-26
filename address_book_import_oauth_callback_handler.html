@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Participant Center</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+	<!--Include YUI Loader: -->
+	<script type="text/javascript" src="../yui/yuiloader/yuiloader-min.js"></script>
+	<!-- dynamic dependency loading -->
+	<script type="text/javascript" src="../yui3/yui/yui-min.js"></script>
+
+	<script type="text/javascript" src="js/modules.js"></script>
+	<script type="text/javascript">
+		var Y = YUI({
+			base: '../yui3/',
+			debug: false,
+			modules: getModules('../', 'convio', true)
+		});
+	</script>
+
+	<!-- Core -->
+	<script type="text/javascript" src="js/convio_config.js"></script>
+	<script type="text/javascript" src="js/convio_utils.js"></script>
+
+
+</head>
+<body>
+<script type="text/javascript">
+	function callRestMethod()
+	{
+		Y.use
+		(
+				/* first, use only those dependencies needed to render "loading" window */
+				'pc2-core-service-dependencies',
+				function(Y)
+				{
+					var url = YAHOO.Convio.PC2.Config.AddressBook.getUrl();
+					var params = "method=addressBookImportOAuthCallback&response_format=json" + YAHOO.Convio.PC2.Utils.getCommonRequestParams();
+					var jobId;
+					jobId = Y.History.getQueryStringParameter('import_job_id');
+					// Yahoo - OAuth 1
+					if (jobId != null) {
+						var token = Y.History.getQueryStringParameter('oauth_token');
+						var verifier = Y.History.getQueryStringParameter('oauth_verifier');
+
+						params += '&import_job_id=' + encodeURIComponent(jobId);
+						params += '&oauth_token=' + encodeURIComponent(token);
+						params += '&oauth_verifier=' + encodeURIComponent(verifier);
+					}
+					// Google OAuth 2
+					else
+					{
+						// State from OAuth 2 is encoded so we have to encode and split query string manually
+						var queryString = decodeURIComponent(window.location.search.slice(1));
+						var splitParams = queryString.split("&");
+						jobId = splitParams[0].split("=")[1];
+						var code = splitParams[1].split("=")[1];
+
+						params += '&import_job_id=' + encodeURIComponent(jobId);
+						params += '&code=' + encodeURIComponent(code);
+					}
+
+					YAHOO.log('Preparing XHR, url=' + url + ', params=' + params, 'info', 'address_book_import_oauth_callback_handler.html');
+					YAHOO.Convio.PC2.Utils.asyncRequest('POST', url,
+							{
+								success: function()
+								{
+									window.close();
+								},
+								failure: function()
+								{
+									window.close();
+								}
+							},
+							params);
+				}
+		);
+	}
+	window.onload = callRestMethod;
+</script>
+</body>
+</html>

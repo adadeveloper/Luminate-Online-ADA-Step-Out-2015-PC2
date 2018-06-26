@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- Tutorial on YUI 3 testing infrastructure: http://developer.yahoo.com/yui/3/test/ -->
+
+<head>
+    <title>PC2 Javascript Tests</title>
+    <!-- Git SVN test -->
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/skins/ux/yui-skin-ux.css" />
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <style>
+    .yui-skin-ux ul li { list-style-type: disc; padding: .5em; }
+    .yui-skin-ux ol li { list-style-type: decimal; list-style-position: inside; padding: .5em;}
+    .yui-skin-ux p { padding: .5em; }
+    .yui-skin-ux div { padding: .5em; text-align: left; }
+    .yui-skin-ux span { padding: 0 .5em; }
+    .yui-skin-ux h1 { font-size: 1.2em; font-weight: bold; text-align: left; padding: .75em; }
+    .yui-skin-ux h2 { font-size: 1.1em; font-weight: bold; text-align: left; padding: .5em; }
+    .yui-skin-ux .fail {
+        background-color: red;
+        color: white;
+    }
+    .yui-skin-ux .pass {
+        background-color: green;
+        color: white;
+    }
+    .yui-skin-ux .ignore {
+        background-color: yellow;
+    }
+    .testResults {
+    }
+    </style>
+    <!--Include YUI Loader: --> 
+    <script type="text/javascript" src="../yui/yuiloader/yuiloader-min.js"></script>
+    <!-- dynamic dependency loading --> 
+    <script type="text/javascript" src="../yui3/yui/yui-min.js"></script>
+    <script type="text/javascript" src="js/modules.js"></script>
+    <script type="text/javascript"> 
+        var Y = YUI({
+            base: '../yui3/',
+            debug: false,
+            modules: getModules('../', 'convio', true),
+            loadOptional: true
+        });
+    </script> 
+    <!-- Core -->
+    
+    <script type="text/javascript" src="js/convio_config.js"></script>
+    <script type="text/javascript" src="js/tests/convio_config_test.js"></script>
+    
+    <script type="text/javascript" src="js/convio_utils.js"></script>
+    <script type="text/javascript" src="js/tests/convio_utils_test.js"></script>
+    
+    <!--  rest-config.js to be included via YUI dependency management -->
+    <script type="text/javascript" src="js/tests/rest-config-test.js"></script>
+    
+    <!--  teammates-functions.js to be included via YUI dependency management -->
+    <script type="text/javascript" src="js/tests/teammates-functions-test.js"></script>
+    
+    <!--  survey-functions.js to be included via YUI dependency management -->
+    <script type="text/javascript" src="js/tests/survey-functions-test.js"></script>
+    
+     <!--  address_book_import_functions.js to be included via YUI dependency management -->
+    <script type="text/javascript" src="js/tests/address_book_import_functions_test.js"></script>
+    
+    <script type="text/javascript" src="../mce/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+    <!--  pc2-tinymce.js to be included via YUI dependency management -->
+    <script type="text/javascript" src="js/tests/pc2-tinymce-test.js"></script>
+    
+    <script type="text/javascript" src="js/teamraiser_utils.js"></script>
+    <script type="text/javascript" src="js/tests/teamraiser_utils_test.js"></script>
+
+	<script type="text/javascript" src="js/content_utils.js"></script>
+	<script type="text/javascript" src="js/tests/content_utils_test.js"></script>
+	
+	<script type="text/javascript" src="js/gift-add-functions.js"></script>
+	<script type="text/javascript" src="js/tests/gift-add-functions-test.js"></script>
+	
+	<script type="text/javascript" src="js/tests/address_book_import_dummy_retrieve_rest_test.js"></script>
+	<script type="text/javascript" src="js/tests/address_book_import_domain_test.js"></script>
+	
+	<!-- admin newsfeed tests to be included via YUI dependency management -->
+	<script type="text/javascript" src="js/tests/admin-newsfeed-functions-test.js"></script>
+	
+	<!--  simple_dialog_builder.js to be included via YUI dependency management -->
+    <script type="text/javascript" src="js/tests/simple_dialog_builder_test.js"></script>
+    
+    <!-- 
+    <script type="text/javascript" src="js/content_rest.js"></script>
+    <script type="text/javascript" src="js/teamraiser_rest.js"></script>
+    <script type="text/javascript" src="js/constituent_rest.js"></script>
+    <script type="text/javascript" src="js/constituent_utils.js"></script>
+    <script type="text/javascript" src="js/address_book_rest.js"></script>
+    <script type="text/javascript" src="js/dashboard.js"></script>
+    <script type="text/javascript" src="js/gift_history_utils.js"></script>
+    <script type="text/javascript" src="js/team_gift_history_utils.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    -->
+    
+    <!-- jQuery UI ready handler -->
+    <script type="text/javascript">
+		
+	</script>
+    
+    <!--Use YUI Loader to bring in your other dependencies: --> 
+    <script type="text/javascript">
+
+    Y.use('jquery-ui', function() {
+
+    	// establish tabs for the test page UI
+		jQuery(function() {
+			jQuery("#testResultsTabs").tabs();
+		});
+
+	    // now do the real testing
+	    Y.use(
+			// unit test infrastructure
+			"test",
+	        "test-eventhandlers",    
+	    	// PC2 dependencies
+	    	'pc2-loading-container-dependencies',    
+	    	'pc2-core-service-dependencies',
+	    	'pc2-initial-page-view-dependencies',
+	        "yui2-datatable",
+	        "jquery-validate",
+	        "node",
+	        "node-event-simulate",
+	        "pc2-rest-config",
+	        "pc2-teammates-functions",
+	        "pc2-survey-functions",
+	        "pc2-addressbookimport-functions",
+	        "pc2-tinymce",
+	        // test case files
+	        "convio_config_test",
+	        "content_utils_test",
+	        "convio_utils_test",
+	        "rest-config-test",
+	        "teammates-functions-test",
+	        "survey-functions-test",
+	        "address_book_import_functions_test",
+	        "pc2-tinymce-test",
+	        "simple_dialog_builder_test",
+	        "teamraiser_utils_test",
+	        "gift-add-functions-test",
+	        "address_book_import_domain_test",
+	        "address_book_import_dummy_retrieve_rest_test",
+	        "pc2-admin-newsfeed-functions-test",
+	        // utils used by test case files
+	        "cookie",
+	        "profiler",
+	        function(Y) {
+	
+	            YAHOO.Convio.PC2.Utils.LoadingMessage="Testing wait screen (no locale).";
+	            YAHOO.Convio.PC2.Utils.LoadingMessage_en_US="Testing wait screen (en_US)";
+	
+	            Y.Test.Case.prototype.fakeCookies = function() {
+	                this.apiKey = YAHOO.Convio.PC2.Config.getApiKey();
+	                this.fakeApiKey = "fake_key_123"
+	                Y.Cookie.set("apiKey", this.fakeApiKey, {path: "/", raw: true} );
+	
+	                this.storageEnabled = YAHOO.Convio.PC2.Config.isStorageEnabled();
+	                this.fakeStorageEnabled = true;
+	                Y.Cookie.set("storageEnabled", this.fakeStorageEnabled, {path: "/", raw: true} );
+	
+	                this.storageClean = YAHOO.Convio.PC2.Config.isStorageClean();
+	                this.fakeStorageClean = false;
+	                Y.Cookie.set("storageClean", this.fakeStorageClean, {path: "/", raw: true} );
+	
+	                this.auth = YAHOO.Convio.PC2.Config.getAuth();
+	                this.fakeAuth = "fake_auth";
+	                Y.Cookie.set("auth", this.fakeAuth, {path: "/", raw: true} );
+	
+	                this.baseUrl = encodeURIComponent(YAHOO.Convio.PC2.Config.getBaseUrl());
+	                this.fakeBaseUrl = "https://localhost/test111/site/";
+	                Y.Cookie.set("baseUrl", this.fakeBaseUrl, {path: "/", raw: true} );
+	
+	                this.securePath = YAHOO.Convio.PC2.Config.getSecurePath();
+	                this.fakeSecurePath = "/test111/site/";
+	                Y.Cookie.set("securePath", this.fakeSecurePath, {path: "/", raw: true} );
+	
+	                this.timeoutWarning = YAHOO.Convio.PC2.Config.getTimeoutWarning();
+	                this.fakeTimeoutWarning = "1200000";
+	                Y.Cookie.set("timeoutWarning", this.fakeTimeoutWarning, {path: "/", raw: true} );
+	
+	                this.timeoutExpiration = YAHOO.Convio.PC2.Config.getTimeoutExpiration();
+	                this.fakeTimeoutExpiration = "1500000";
+	                Y.Cookie.set("timeoutExpiration", this.fakeTimeoutExpiration, {path: "/", raw: true} );
+	
+	                this.frId = YAHOO.Convio.PC2.Config.Teamraiser.getFrId();
+	                this.fakeFrId = "345";
+	                Y.Cookie.set("frId", this.fakeFrId, {path: "/", raw: true} );
+	
+	                this.sessionKey = YAHOO.Convio.PC2.Config.getSessionKey();
+	                this.fakeSessionKey = "fake_session_id";
+	                Y.Cookie.set("sessionKey", this.fakeSessionKey, {path: "/", raw: true} );
+
+	                this.progressImageId = YAHOO.Convio.PC2.Config.getProgressImageId();
+	                this.fakeProgressImageId = "23";
+	                Y.Cookie.set("progressImageId", this.fakeProgressImageId, {path: "/", raw: true} );
+	                
+	            };
+	
+	            Y.Test.Case.prototype.restoreCookies = function() {
+	                Y.Cookie.set("apiKey", this.apiKey, {path: "/", raw: true} );
+	                Y.Cookie.set("storageEnabled", this.storageEnabled, {path: "/", raw: true} );
+	                Y.Cookie.set("storageClean", this.storageClean, {path: "/", raw: true} );
+	                Y.Cookie.set("auth", this.auth, {path: "/", raw: true} );
+	                Y.Cookie.set("baseUrl", decodeURIComponent(this.baseUrl), {path: "/", raw: true} );
+	                Y.Cookie.set("securePath", this.securePath, {path: "/", raw: true} );
+	                Y.Cookie.set("timeoutWarning", this.timeoutWarning, {path: "/", raw: true} );
+	                Y.Cookie.set("timeoutExpiration", this.timeoutExpiration, {path: "/", raw: true} );
+	                Y.Cookie.set("frId", this.frId, {path: "/", raw: true} );
+	                Y.Cookie.set("sessionKey", this.sessionKey, {path: "/", raw: true} );
+	                Y.Cookie.set("progressImageId", this.progressImageId, {path: "/", raw: true} );
+	            };
+	
+	            var resultHandler = function(data) {
+	                var TestRunner = Y.Test.Runner;
+	                var resultsList = Y.one(data.testCase._should.useList);
+	                var resultsListTabHeader = Y.one(data.testCase._should.useList + "_tab_header");
+	                var resultType;
+	                var resultMessage;
+	                
+	                switch(data.type) {
+	                
+	                case TestRunner.TEST_FAIL_EVENT:
+	                    resultType = "fail";
+	                    resultMessage = "FAIL - " + data.error.message;
+	
+						if (resultsListTabHeader) {
+							resultsListTabHeader.setStyle('color', 'red');
+							resultsListTabHeader.set('innerHTML', 'FAILED: ' + resultsListTabHeader.get('innerHTML'))
+						}
+						else {
+							alert('Failed to provide visual hint for failed test.\n\n'+
+									'Make sure '+data.testCase._should.useList + "_tab_header exists in this page");
+						}
+	                    
+	                    break;
+	                case TestRunner.TEST_PASS_EVENT:
+	                    resultType = "pass";
+	                    resultMessage = "PASS";
+	                    break;
+	                case TestRunner.TEST_IGNORE_EVENT:
+	                    resultType = "ignore";
+	                    resultMessage = "IGNORED"
+	                    break;
+	                }
+	                
+	                var resultNode = Y.Node.create('<li>' + data.testName + ' : <span class="' + resultType + '">' + resultMessage + '</span></li>');
+	                resultsList.appendChild(resultNode);
+	             
+	                var noResultsItem = Y.one(data.testCase._should.useList + ' .no_results');
+	                if(noResultsItem) {
+	                    noResultsItem.remove();
+	                }
+	            }
+	            
+	            // Namespace convenience
+	            var TestRunner = Y.Test.Runner;
+	            
+	            // Add handlers            
+	            TestRunner.subscribe(TestRunner.TEST_FAIL_EVENT, resultHandler);
+	            TestRunner.subscribe(TestRunner.TEST_IGNORE_EVENT, resultHandler);
+	            TestRunner.subscribe(TestRunner.TEST_PASS_EVENT, resultHandler);
+	            
+	            // run tests
+	          	TestRunner.run();
+	        }
+	    );
+    });
+    </script>
+</head>
+<body class="yui-skin-ux">
+
+    <h1>Test Results</h1>
+    
+    <div id="testResultsTabs">
+    
+    	<ul>
+			<li><a id="utils_results_list_tab_header" href="#utils_results_list_tab">YAHOO.Convio.PC2.Utils</a></li>
+			<li><a id="config_results_list_tab_header" href="#config_results_list_tab">YAHOO.Convio.PC2.Config</a></li>
+			<li><a id="rest_config_results_list_tab_header" href="#rest_config_results_list_tab">YAHOO.Convio.PC2.RestConfig</a></li>
+			<li><a id="pc2_teammates_functions_results_list_tab_header" href="#pc2_teammates_functions_results_list_tab">Teammates Functions</a></li>
+			<li><a id="pc2_survey_functions_results_list_tab_header" href="#pc2_survey_functions_results_list_tab">Survey Functions</a></li>
+			<li><a id="pc2_address_book_import_functions_results_list_tab_header" href="#pc2_address_book_import_functions_results_list_tab">Address Book Import Functions</a></li>
+			<li><a id="pc2_gift_add_functions_results_list_tab_header" href="#pc2_gift_add_functions_results_list_tab">Add Gift Functions</a></li>
+			<li><a id="pc2_tinymce_results_list_tab_header" href="#pc2_tinymce_results_list_tab">YAHOO.Convio.PC2.TinyMCE</a></li>
+			<li><a id="simple_dialog_builder_results_list_tab_header" href="#simple_dialog_builder_results_list_tab">YAHOO.Convio.PC2.Component.PC2SimpleDialog</a></li>
+			<li><a id="teamraiser_utils_results_list_tab_header" href="#teamraiser_utils_results_list_tab">YAHOO.Convio.PC2.Component.Teamraiser</a></li>
+			<li><a id="content_utils_results_list_tab_header" href="#content_utils_results_list_tab">YAHOO.Convio.PC2.Component.Content</a></li>
+			<li><a id="address_book_import_results_list_tab_header" href="#address_book_import_results_list_tab">Address Book Import</a></li>
+			<li><a id="address_book_import_dummy_rest_results_list_tab_header" href="#address_book_import_dummy_rest_results_list_tab">Address Book Import (Dummy) REST</a></li>
+			<li><a id="pc2_admin_newsfeed_functions_results_list_tab_header" href="#pc2_admin_newsfeed_functions_results_list_tab">Admin News Feed Functions</a></li>
+			<li><a id="testEvents_tab_header" href="#testEvents_tab">Test Event Log</a></li>
+		</ul>
+    
+        <div id="utils_results_list_tab" class="testResults">
+	        <ul id="utils_results_list">
+	            <li class="no_results">No results yet</li>
+	        </ul>
+	        
+	        <!-- Simple DOM elements expected by this test -->
+	        <iframe id="embeddedParticipantCenter" src="./tests_iFrameSrc.html" width="200px" height="200px"> </iframe>
+	        	        
+        </div>
+        
+        <div id="config_results_list_tab" class="testResults">
+	        <ul id="config_results_list">
+	            <li class="no_results">No results yet</li>
+	        </ul>
+	    </div>
+	    
+        <div id="rest_config_results_list_tab" class="testResults">
+	        <ul id="rest_config_results_list">
+	            <li class="no_results">No results yet</li>
+	        </ul>
+        </div>
+        
+        <div id="pc2_teammates_functions_results_list_tab" class="testResults">
+	        <ul id="pc2_teammates_functions_results_list">
+	            <li class="no_results">No results yet</li>
+	        </ul>
+	    </div>
+	    
+	    <div id="pc2_survey_functions_results_list_tab" class="testResults">
+	        <ul id="pc2_survey_functions_results_list">
+	            <li class="no_results">No results yet</li>
+	        </ul>
+	        
+	        <!-- Simple DOM elements expected by this test -->
+	        <div id="surveyQuestionParentDiv">
+	        </div>
+	        
+	    </div>
+	    
+	    <div id="pc2_address_book_import_functions_results_list_tab" class="testResults">
+	        <ul id="pc2_address_book_import_functions_results_list">
+	            <li class="no_results">No results yet</li>
+	        </ul>
+	        
+	        <!-- Simple DOM elements expected by this test -->
+	        <div id="addressbookimport-importcandidatecontacts-list">
+	        </div>
+	        <div id="addressbookimport-csvmapping-preview-list">
+	        </div>
+	        <div id="addressbookimport-importresults-newly-added-list">
+	        </div>
+	        <div id="addressbookimport-importresults-suspected-duplicates-list">
+	        </div>
+	        <div id="addressbookimport-importresults-exact-duplicates-list">
+	        </div>
+	        <div id="addressbookimport-importresults-errors-list">
+	        </div>
+	    </div>
+	    
+	    <div id="pc2_gift_add_functions_results_list_tab" class="testResults">
+	        <ul id="pc2_gift_add_functions_results_list">
+	            <li class="no_results">No results yet</li>
+	        </ul>
+	        
+	        <!-- Simple DOM elements expected by this test -->
+	        Check: <input type="radio" name="gift_payment_type" value="check" />
+	        <br/>
+	        Credit Card: <input type="radio" name="gift_payment_type" value="credit" />
+	        
+	    </div>
+	    
+	    <div id="pc2_tinymce_results_list_tab" class="testResults">
+	        <ul id="pc2_tinymce_results_list">
+	            <li class="no_results">No results yet</li>
+	        </ul>
+	        
+	        <!-- Simple DOM elements expected by this test -->
+	        <textarea id="test-rich-text-1" class="w95" rows="15" cols="50"> test-rich-text-1 </textarea>
+	        <textarea id="test-rich-text-2" class="w95" rows="15" cols="50"> test-rich-text-2 </textarea>
+	        
+	    </div>
+	    
+	    <div id="simple_dialog_builder_results_list_tab" class="testResults">
+	        <ul id="simple_dialog_builder_results_list">
+	            <li class="no_results">No results yet</li>
+	        </ul>
+	    </div>
+	    
+	    <div id="teamraiser_utils_results_list_tab" class="testResults">
+	        <ul id="teamraiser_utils_results_list">
+	            <li class="no_results">No results yet</li>
+	        </ul>
+	    </div>
+	    
+	    <div id="content_utils_results_list_tab" class="testResults">
+	        <ul id="content_utils_results_list">
+	            <li class="no_results">No results yet</li>
+	        </ul>
+	        
+	        <!-- Simple DOM elements expected by this test -->
+	        <div>
+	        	<span id="hd-etc-locale">
+	        		<label for="hd-etc-locale-selector">Locale Selector:</label>&nbsp;
+		        	<select id="hd-etc-locale-selector" name="hd-etc-locale-selector"></select>
+		       	</span>
+	        </div>
+	        <div id="testFixValues_ById" style="border: solid 1px; width: 250px">
+	        	<h3 id="msg_cat_h3">&nbsp;</h3>
+	        	<div id="msg_cat_div">&nbsp;</div>
+	        	<div>
+	        		<span id="msg_cat_span">&nbsp;</span>
+	        		<p id="msg_cat_p"></p>
+	        		<div>
+	        			<span>
+	        				<a id="msg_cat_a" href="#">&nbsp;</a>
+	        			</span>
+	        		</div>
+	        	</div>
+	        </div>
+	        <br/>
+	        <div id="testFixValues_ByClass" style="border: solid 1px; width: 250px">
+	        	<h3 class="foo msg_cat_class_h3 bar">&nbsp;</h3>
+	        	<div class="foo msg_cat_class_div bar">&nbsp;</div>
+	        	<div>
+	        		<span class="foo msg_cat_class_span bar">&nbsp;</span>
+	        		<p class="foo msg_cat_class_p bar"></p>
+	        		<div>
+	        			<span>
+	        				<a class="foo msg_cat_class_a bar" href="#">&nbsp;</a>
+	        			</span>
+	        		</div>
+	        	</div>
+	        </div>
+	    </div>
+	    
+	   	<div id="address_book_import_results_list_tab" class="testResults">
+	        <ul id="address_book_import_results_list">
+	            <li class="no_results">No results yet</li>
+	        </ul>
+	    </div>
+	    
+	   	<div id="address_book_import_dummy_rest_results_list_tab" class="testResults">
+	        <ul id="address_book_import_dummy_rest_results_list">
+	            <li class="no_results">No results yet</li>
+	        </ul>
+	    </div>
+	    
+	   	<div id="pc2_admin_newsfeed_functions_results_list_tab" class="testResults">
+	        <ul id="pc2_admin_newsfeed_functions_results_list">
+	            <li class="no_results">No results yet</li>
+	        </ul>
+	        
+	        <!-- DOM elements expected by these tests -->
+	        <div style="border: 1px solid black;">
+	        	<span>These elements are used for unit testing</span>
+				<div id="newsfeed-popup-header" class="newsfeed-header clearfix hidden-form">
+					<h1 id="msg_cat_admin_newsfeed_header_h1" class="newsfeed-header-elem">Messages<!-- Messages --></h1>
+					<div class="right-container">
+						<div class="newsfeed-header-elem">
+							<a id="msg_cat_admin_newsfeed_header_view_all" href="#">View All Messages<!-- View All Messages --></a>
+						</div>
+						<div class="newsfeed-header-elem">
+							<a id="msg_cat_admin_newsfeed_header_close_window" href="#">Close Window X<!-- Close Window X --></a>
+						</div>
+					</div>
+				</div>
+			       	
+			   	<div id="newsfeed-all-header" class="hidden-form clearfix">
+			   		<div id="newsfeed-all-header-left-container">
+						<div id="msg_cat_admin_newsfeed_list_header_all_messages">All Messages<!-- All Messages --></div>
+						<div id="msg_cat_admin_newsfeed_list_header_total">{0} Total<!-- {0} Total --></div>
+						<div>|</div>
+						<div id="msg_cat_admin_newsfeed_list_header_new"><b>{0} New</b><!-- {0} New --></div>
+					</div>
+					<div id="newsfeed-all-header-right-container">
+						<select id="newsfeed-sort-select">
+							<option id="msg_cat_admin_newsfeed_sort_by_MODIFY_DATE" selected value="MODIFY_DATE">Sort By Date<!-- Sort By Date --></option>
+			       			<option id="msg_cat_admin_newsfeed_sort_by_FEED_TITLE" value="FEED_TITLE">Sort By Title<!-- Sort By Title --></option>
+			      		</select>
+			       	</div>
+				</div>
+			   	<div id="msg_cat_admin_newsfeed_newsitem_read_more" class="hidden-form">Read More<!-- Read More --></div>
+				<div id="msg_cat_admin_newsfeed_new" class="hidden-form">new<!-- new --></div>
+			                        
+				<div id="newsfeed-container" class="ux-block2 clearfix hidden-form">
+					<h3 id="msg_cat_admin_newsfeed_bar_title">Home State Messages<!-- Home State Messages --></h3>
+					<div id="carousel-container"></div>
+					<div id="newsitem-image-container" class="newsitem-container newsitem-image-container"></div>
+					<div id="newsitem-main-container" class="newsitem-container newsitem-main-container">
+						<div id="newsitem-body-container"></div>
+						<div id="carousel-paginator"></div>
+						<div><a id="msg_cat_admin_newsfeed_view_all" href="#">View All Messages<!-- View All Messages --></a></div>
+						<div id="msg_cat_admin_newsfeed_new_total_container">( {0} new / {1} total )<!-- ( {0} new / {1} total ) --></div>
+					</div>
+				</div>
+	        </div>
+	    </div>
+	    
+	    <div id="testEvents_tab" class="testResults">
+			<!-- a container for recording all test events -->
+			<div id="testEvents"></div>	        
+	    </div>
+	    
+	</div>
+    
+    <div id="out"></div>
+    <button onclick="window.open('js/jscoverage.html');">Coverage report</button>
+    <!-- <div id="wait"></div> -->
+</body>
+</html>
